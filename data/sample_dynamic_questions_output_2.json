@@ -1,0 +1,71 @@
+{
+  "user_context_summary": "The user is analytical, enjoys identifying patterns, and feels motivated when solving logical problems. They are less experienced with creative design but communicate ideas clearly and systematically.",
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "question_text": "When given a complex challenge, how often do you break it into smaller steps before working on it?",
+      "options": {
+        "A": "Always",
+        "B": "Often",
+        "C": "Sometimes",
+        "D": "Rarely"
+      }
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "question_text": "How often do you look for patterns or trends before drawing conclusions?",
+      "options": {
+        "A": "Always",
+        "B": "Often",
+        "C": "Sometimes",
+        "D": "Rarely"
+      }
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "question_text": "Before making changes to a process, how often do you think through possible consequences?",
+      "options": {
+        "A": "Always",
+        "B": "Often",
+        "C": "Sometimes",
+        "D": "Rarely"
+      }
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "question_text": "How often do you adjust your communication style depending on who you're speaking to?",
+      "options": {
+        "A": "Always",
+        "B": "Often",
+        "C": "Sometimes",
+        "D": "Rarely"
+      }
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "question_text": "When analyzing data, how often do you think about how your findings could improve the user experience?",
+      "options": {
+        "A": "Always",
+        "B": "Often",
+        "C": "Sometimes",
+        "D": "Rarely"
+      }
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "question_text": "When writing or presenting, how often do you review your content to ensure it’s concise and clear?",
+      "options": {
+        "A": "Always",
+        "B": "Often",
+        "C": "Sometimes",
+        "D": "Rarely"
+      }
+    }
+  ]
+}
