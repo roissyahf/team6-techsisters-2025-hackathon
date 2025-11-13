@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "When faced with a complex problem, do you feel comfortable breaking it down into smaller, manageable parts?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you enjoy looking at numbers or data to find patterns or insights that can help you make decisions?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you find joy in creating designs or experiences that focus on what users want and need?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "When working on a project, do you think about potential risks and how to best manage them?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you feel confident sharing your ideas and collaborating with others to achieve a common goal?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Are you comfortable expressing yourself clearly in writing or through visuals to convey your ideas?"
+    }
+  ],
+  "user_context_summary": "The user is a student with some familiarity with technology, interested in designing visuals or user experiences, motivated by impact and innovation, and identifying as a beginner."
+}

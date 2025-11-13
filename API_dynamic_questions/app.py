@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import json
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
 from datetime import datetime
 
@@ -8,6 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # === Initialize OpenAI Client ===
+load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # === Step 1: Persona Builder ===
@@ -69,11 +71,16 @@ def generate_dynamic_questions(user_base_json, num_questions=6):
     - Each question must relate naturally to the user's persona.
     - Each question probes ONE competency only.
     - Each question must have exactly 4 answer options (A-D) forming an ordinal scale.
-    - The 4 options must represent alignment intensity:
+    - The 4 options must represent strength or intensity of alignment with the question, for example:
         A. Strongly agree / Always
         B. Often / Agree
         C. Sometimes / Neutral
         D. Rarely / Disagree
+    - The meaning of each option should allow consistent scoring:
+        A → 1.0  
+        B → 0.75  
+        C → 0.5  
+        D → 0.25
     - Avoid open-ended or subjective responses.
     - Output format (strict JSON):
       {{
@@ -125,6 +132,10 @@ def generate_dynamic_questions(user_base_json, num_questions=6):
 
 
 # === Step 3: API Endpoint ===
+@app.route("/", methods=["GET"])
+def index():
+    return "Model Service is Running", 200
+
 @app.route("/generate_dynamic_questions", methods=["POST"])
 def api_generate_dynamic_questions():
     try:

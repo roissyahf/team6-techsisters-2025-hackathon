@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "When you approach a problem, do you prefer to break it down into smaller steps to find a solution?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you enjoy looking at information or data to figure out patterns or trends?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you find yourself excited to create designs or visuals that enhance user experiences?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "When planning a project, do you often consider potential obstacles and how to overcome them?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you feel comfortable sharing your ideas and designs with others for feedback?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "Strongly agree / Always",
+        "B": "Often / Agree",
+        "C": "Sometimes / Neutral",
+        "D": "Rarely / Disagree"
+      },
+      "question_text": "Do you enjoy writing or creating content that communicates ideas clearly?"
+    }
+  ],
+  "user_context_summary": "The user is a job seeker interested in designing visuals or user experiences, with some prior exposure to technology but little practical experience. They prefer self-learning and seek flexible work opportunities."
+}

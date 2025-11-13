@@ -85,46 +85,47 @@ def generate_dynamic_questions(user_base_answers, num_questions=6):
 
     {json.dumps(competencies, indent=2)}
 
-    ⚙️ Rules:
+    Rules:
     - The tone should be warm, encouraging, and non-technical.
-    - Each question must feel personal based on user's background and motivation.
-    - Each question must probe ONE competency only.
-    - Each question must have exactly 4 answer options (A-D).
-    - The 4 options must form an ordinal scale that reflects strength or intensity of alignment with the competency.
-        Example pattern: 
-        A. Strongly agree / Always  
-        B. Agree / Often  
-        C. Disagree / Sometimes  
-        D. Strongly disagree / Rarely
+    - Each question must relate naturally to the user's persona.
+    - Each question probes ONE competency only.
+    - Each question must have exactly 4 answer options (A-D) forming an ordinal scale.
+    - The 4 options must represent strength or intensity of alignment with the question, for example:
+        A. Strongly agree / Always
+        B. Often / Agree
+        C. Sometimes / Neutral
+        D. Rarely / Disagree
     - The meaning of each option should allow consistent scoring:
         A → 1.0  
         B → 0.75  
         C → 0.5  
         D → 0.25
     - Avoid free-text, open-ended, or qualitative answers.
-    - Output should be **strictly in JSON** list format:
-      [
-        {{
-          "competency": "A",
-          "question": "When faced with new problems, how often do you explore multiple solutions before deciding?",
-          "options": [
-            "A": "Always"
-            "B": "Often",
-            "C": "Sometimes",
-            "D": "Rarely"
-          ]
-        }},
-        ...
-      ]
+    - Output should be strictly in JSON list format:
+    {{
+        "user_context_summary": "short summary of persona",
+        "questions": [
+          {{
+            "competency": "A",
+            "competency_name": "Logical & Structured Thinking",
+            "question_text": "...",
+            "options": {{
+              "A": "...",
+              "B": "...",
+              "C": "...",
+              "D": "..."
+            }}
+          }}
+        ]
+      }} 
     """
 
     user_prompt = f"""
     Here are the user's base answers:
     {user_context}
 
-    Based on these, generate exactly {num_questions} dynamic questions
-    that explore their potential fit for the competencies A-F.
-    Try to balance coverage — one per category if possible.
+    Based on these, generate exactly {num_questions} close-ended questions that measure their natural alignment
+    to the competencies A-F. Try to balance coverage — one per category. Make it sound conversational, encouraging, and personal.
     """
 
     response = client.chat.completions.create(
@@ -151,7 +152,7 @@ def generate_dynamic_questions(user_base_answers, num_questions=6):
 
 
 # Call the function
-user_profile_json_path = "data\sample_base_questions_response.json"
+user_profile_json_path = "data/sample_base_questions_response.json"
 try:
     with open(user_profile_json_path, 'r') as file:
         user_profile_json = json.load(file)
@@ -166,5 +167,6 @@ except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
 user_base_answers = build_user_persona(user_profile_json)
+print(user_base_answers)
 questions = generate_dynamic_questions(user_base_answers, num_questions=6)
 print(json.dumps(questions, indent=2))

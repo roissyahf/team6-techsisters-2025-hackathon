@@ -1,0 +1,48 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-13T08:45:00Z",
+    "user_id": "USR_20251113_003",
+    "responses": {
+      "Q1_current_status": {
+        "question": "What best describes your current situation?",
+        "answer": "Working Professional (Tech)"
+      },
+      "Q2_tech_familiarity": {
+        "question": "How familiar are you with technology and digital tools?",
+        "answer": "Very comfortable"
+      },
+      "Q3_tech_experience": {
+        "question": "Have you ever taken a course, training, or worked on a project related to tech?",
+        "answer": "Yes"
+      },
+      "Q4_interest_area": {
+        "question": "Which of these areas interests you the most?",
+        "answer": "Building and coding software or apps"
+      },
+      "Q5_motivation": {
+        "question": "What motivates you most to pursue a tech career?",
+        "answer": "Career advancement"
+      },
+      "Q6_skill_level": {
+        "question": "How would you describe your current technical skill level?",
+        "answer": "Expert (I’ve worked or studied deeply in a tech area)"
+      },
+      "Q7_project_experience": {
+        "question": "Have you ever completed a personal or professional tech project?",
+        "answer": "Yes, large or professional projects"
+      },
+      "Q8_learning_preference": {
+        "question": "How do you prefer to learn new skills?",
+        "answer": "Mentorship or group learning"
+      },
+      "Q9_time_commitment": {
+        "question": "How much time can you dedicate to learning weekly?",
+        "answer": "10+ hours"
+      },
+      "Q10_goal": {
+        "question": "What is your main goal right now?",
+        "answer": "Apply for tech roles"
+      }
+    }
+  }
+}
