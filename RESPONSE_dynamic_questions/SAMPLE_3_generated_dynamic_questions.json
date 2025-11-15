@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed project plan with specific milestones and tasks to ensure everything is organized.",
+        "B": "I outline the main steps involved and make adjustments as I progress through the project.",
+        "C": "I have a general idea of the project flow but often figure out the details on the go.",
+        "D": "I tend to dive in without a clear plan, relying on improvisation to guide my work."
+      },
+      "question_text": "When faced with a complex project, how do you typically approach the planning phase?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I systematically categorize feedback and prioritize changes based on user impact to drive actionable insights.",
+        "B": "I review the feedback and look for common themes that could improve the user experience.",
+        "C": "I skim through the feedback but often focus on the most vocal users' opinions.",
+        "D": "I find analyzing feedback tedious, so I usually skip this step."
+      },
+      "question_text": "How do you handle analyzing feedback data from a user testing session?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I engage in collaborative brainstorming sessions, focusing on user needs and innovative solutions.",
+        "B": "I generate a list of ideas based on existing apps and tweak them to fit our goals.",
+        "C": "I prefer to think of features individually, often without considering user feedback.",
+        "D": "I mostly rely on my past experiences and don't explore new ideas in depth."
+      },
+      "question_text": "When brainstorming features for a new app, what is your typical process?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I conduct thorough risk assessments early on and develop mitigation strategies for each identified risk.",
+        "B": "I review past projects for lessons learned and consider common risks that may arise.",
+        "C": "I think about risks as they come up during the project but don’t plan ahead.",
+        "D": "I usually overlook risks, believing that everything will work out in the end."
+      },
+      "question_text": "How do you approach identifying potential risks in a software development project?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I provide regular, structured updates through meetings and reports to keep everyone informed.",
+        "B": "I share updates as needed and prefer to keep communication informal.",
+        "C": "I update stakeholders sporadically, usually when major changes occur.",
+        "D": "I avoid communicating updates unless absolutely necessary, focusing on my tasks instead."
+      },
+      "question_text": "How do you typically communicate project updates to your team and stakeholders?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I meticulously organize the content, using clear language and visuals to make it easily understandable.",
+        "B": "I aim for clarity but sometimes rely on technical jargon that may confuse some readers.",
+        "C": "I write documentation as needed but often skip details that seem obvious to me.",
+        "D": "I find writing documentation burdensome and often leave it incomplete."
+      },
+      "question_text": "How do you ensure clarity in the documentation you write for your software projects?"
+    }
+  ],
+  "user_context_summary": "expert professional seeking tech roles"
+}

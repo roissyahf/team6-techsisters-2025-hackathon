@@ -4,68 +4,68 @@
       "competency": "A",
       "competency_name": "Logical & Structured Thinking",
       "options": {
-        "A": "Strongly agree / Always",
-        "B": "Often / Agree",
-        "C": "Sometimes / Neutral",
-        "D": "Rarely / Disagree"
+        "A": "I create a detailed project plan with timelines and specific steps to follow.",
+        "B": "I outline the main tasks and decide on the order in which to tackle them.",
+        "C": "I sometimes jot down a few tasks but often go with the flow as I work.",
+        "D": "I usually dive into tasks without much planning or structure."
       },
-      "question_text": "When faced with a complex problem, do you feel comfortable breaking it down into smaller, manageable parts?"
+      "question_text": "When faced with a complex project, how do you approach organizing your tasks?"
     },
     {
       "competency": "B",
       "competency_name": "Data & Analytical Insight",
       "options": {
-        "A": "Strongly agree / Always",
-        "B": "Often / Agree",
-        "C": "Sometimes / Neutral",
-        "D": "Rarely / Disagree"
+        "A": "I analyze all feedback carefully and adjust my approach based on the data.",
+        "B": "I consider the feedback and make changes if they seem worthwhile.",
+        "C": "I look at feedback but often stick to my original ideas.",
+        "D": "I rarely take feedback into account when completing a project."
       },
-      "question_text": "Do you enjoy looking at numbers or data to find patterns or insights that can help you make decisions?"
+      "question_text": "How do you handle feedback and data when working on a project?"
     },
     {
       "competency": "C",
       "competency_name": "Creative & User-Centricity",
       "options": {
-        "A": "Strongly agree / Always",
-        "B": "Often / Agree",
-        "C": "Sometimes / Neutral",
-        "D": "Rarely / Disagree"
+        "A": "I actively seek user input through surveys and adjust my designs based on their needs.",
+        "B": "I gather some feedback and try to incorporate it into my designs where I can.",
+        "C": "I look at user comments occasionally but mostly rely on my intuition.",
+        "D": "I focus on my own ideas without considering what users think or want."
       },
-      "question_text": "Do you find joy in creating designs or experiences that focus on what users want and need?"
+      "question_text": "When designing a visual or user experience, how do you incorporate user feedback?"
     },
     {
       "competency": "D",
       "competency_name": "Systemic & Risk Management",
       "options": {
-        "A": "Strongly agree / Always",
-        "B": "Often / Agree",
-        "C": "Sometimes / Neutral",
-        "D": "Rarely / Disagree"
+        "A": "I create a list of potential risks and develop strategies to mitigate them.",
+        "B": "I think about possible risks but don\u2019t always plan for them.",
+        "C": "I usually overlook risks and focus on completing the project.",
+        "D": "I rarely consider risks when starting a new project."
       },
-      "question_text": "When working on a project, do you think about potential risks and how to best manage them?"
+      "question_text": "How do you evaluate potential risks in your projects?"
     },
     {
       "competency": "E",
       "competency_name": "Communication & Stakeholder",
       "options": {
-        "A": "Strongly agree / Always",
-        "B": "Often / Agree",
-        "C": "Sometimes / Neutral",
-        "D": "Rarely / Disagree"
+        "A": "I schedule regular check-ins and encourage open dialogue among team members.",
+        "B": "I share updates occasionally and respond to team members when they reach out.",
+        "C": "I communicate mainly when necessary, but I don't initiate discussions often.",
+        "D": "I prefer to work independently and rarely communicate with the team."
       },
-      "question_text": "Do you feel confident sharing your ideas and collaborating with others to achieve a common goal?"
+      "question_text": "How do you ensure effective communication with team members during a project?"
     },
     {
       "competency": "F",
       "competency_name": "Content & Language Fluency",
       "options": {
-        "A": "Strongly agree / Always",
-        "B": "Often / Agree",
-        "C": "Sometimes / Neutral",
-        "D": "Rarely / Disagree"
+        "A": "I carefully edit my content and ask others for feedback to ensure clarity.",
+        "B": "I proofread my work but may not always consider the audience's perspective.",
+        "C": "I focus on getting my ideas down and don't spend much time on clarity.",
+        "D": "I often skip editing altogether and submit content as it is."
       },
-      "question_text": "Are you comfortable expressing yourself clearly in writing or through visuals to convey your ideas?"
+      "question_text": "When creating content for a project, how do you ensure clarity and understanding?"
     }
   ],
-  "user_context_summary": "The user is a student with some familiarity with technology, interested in designing visuals or user experiences, motivated by impact and innovation, and identifying as a beginner."
+  "user_context_summary": "student interested in design"
 }
