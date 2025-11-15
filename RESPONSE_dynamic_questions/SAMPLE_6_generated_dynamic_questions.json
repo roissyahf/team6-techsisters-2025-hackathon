@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed timeline with milestones and regularly check my progress against it.",
+        "B": "I outline my tasks and prioritize them, adjusting my plan as needed throughout the project.",
+        "C": "I generally list tasks but might forget to follow a strict order or timeline.",
+        "D": "I start working on tasks as they come to mind, often without a clear plan."
+      },
+      "question_text": "When planning a new project, how do you organize your tasks?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I systematically categorize feedback and use it to make data-driven improvements to my work.",
+        "B": "I review feedback and try to identify trends that could inform my future content.",
+        "C": "I sometimes look at feedback but often rely on my instincts when creating content.",
+        "D": "I rarely analyze feedback, focusing more on my personal preferences."
+      },
+      "question_text": "How do you approach analyzing feedback on your content?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I actively seek out user insights and integrate them into my content design to enhance user experience.",
+        "B": "I consider user feedback when it’s available, using it to inspire some of my ideas.",
+        "C": "I occasionally glance at user feedback but mostly stick to my original concepts.",
+        "D": "I prefer to create content based on my own ideas rather than user input."
+      },
+      "question_text": "How do you incorporate user feedback into your content creation process?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I conduct thorough research to identify risks and develop strategies to mitigate them before starting.",
+        "B": "I evaluate risks during the project but may not have a formal process for addressing them.",
+        "C": "I usually consider risks only if they become apparent during the project.",
+        "D": "I rarely think about risks, focusing instead on completing the project."
+      },
+      "question_text": "How do you assess potential risks in your content projects?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I provide regular, structured updates with detailed progress reports and seek feedback consistently.",
+        "B": "I share updates periodically and ensure to highlight key accomplishments and challenges.",
+        "C": "I communicate updates when prompted, but may not provide comprehensive information.",
+        "D": "I often skip updates, assuming everyone is aware of my progress."
+      },
+      "question_text": "How do you communicate project updates to your team or stakeholders?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I always tailor my language and structure to the audience, using clear examples and engaging formats.",
+        "B": "I focus on clarity and try to engage the audience, though I may not always adjust my style.",
+        "C": "I prioritize my writing style over audience engagement, sometimes sacrificing clarity.",
+        "D": "I usually write in a way that feels comfortable to me, without much consideration for the audience."
+      },
+      "question_text": "When creating content, how do you ensure clarity and engagement for your audience?"
+    }
+  ],
+  "user_context_summary": "intermediate job seeker in content creation"
+}

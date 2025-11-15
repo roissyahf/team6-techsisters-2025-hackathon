@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed list, rank tasks by urgency, and focus on completing them systematically.",
+        "B": "I generally list out my tasks and start with what seems most important at the moment.",
+        "C": "I tend to jump between tasks based on how I feel rather than a clear order.",
+        "D": "I struggle with prioritizing tasks and often end up working on what's easiest."
+      },
+      "question_text": "When faced with multiple tasks, how do you prioritize your work?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I thoroughly review all available data, looking for patterns before making a decision.",
+        "B": "I consult the data but also rely on my intuition to guide my choices.",
+        "C": "I might look at some data, but I often make decisions based on previous experiences.",
+        "D": "I usually avoid analyzing data and prefer to go with my gut feeling."
+      },
+      "question_text": "How do you approach analyzing information to make decisions?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I actively seek user feedback and make adjustments based on their suggestions.",
+        "B": "I consider user feedback when I remember to, but I don't always take it into account.",
+        "C": "I sometimes look at feedback, but I mainly stick to my original ideas.",
+        "D": "I rarely seek user feedback and prefer to work independently."
+      },
+      "question_text": "How do you incorporate user feedback into your work process?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I proactively identify risks and develop contingency plans to mitigate them.",
+        "B": "I usually consider possible risks, but I don't always plan for them in detail.",
+        "C": "I tend to focus on the positives and only think about risks if they arise.",
+        "D": "I often ignore potential risks and hope for the best."
+      },
+      "question_text": "How do you handle potential risks in a project?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I set regular check-ins and use clear channels for updates to keep everyone informed.",
+        "B": "I communicate when necessary but don't always ensure everyone is on the same page.",
+        "C": "I rely on informal conversations which sometimes lead to misunderstandings.",
+        "D": "I often leave communication to others and assume they'll figure it out."
+      },
+      "question_text": "When coordinating with team members, how do you ensure effective communication?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I carefully structure my messages and proofread them to enhance clarity and impact.",
+        "B": "I write clearly most of the time but occasionally overlook details.",
+        "C": "I write quickly and sometimes miss important points or clarity.",
+        "D": "I often struggle with written communication and don't focus on clarity."
+      },
+      "question_text": "How do you ensure your written communication is clear and effective?"
+    }
+  ],
+  "user_context_summary": "beginner exploring tech project management"
+}
