@@ -1,0 +1,53 @@
+{
+    "user_id": "USR_20251113_001",
+    "persona_flags": {
+        "beginner": true,
+        "low_time": false,
+        "remote_only": false,
+        "career_break": false
+    },
+    "persona_summary": "The user is currently a student, interested in designing visuals or user experiences, identifying as beginner (i have little or no practical experience), and can dedicate about 3-6 hours per week to learning.",
+    "aptitude_vector": [
+        0.75,
+        1.0,
+        0.75,
+        0.75,
+        0.5,
+        1.0
+    ],
+    "dynamic_answers": {
+        "dynamic_answers": [
+            {
+                "competency": "A",
+                "selected_option": "B",
+                "option_text": "I outline the main tasks and decide on the order in which to tackle them."
+            },
+            {
+                "competency": "B",
+                "selected_option": "A",
+                "option_text": "I analyze all feedback carefully and adjust my approach based on the data."
+            },
+            {
+                "competency": "C",
+                "selected_option": "B",
+                "option_text": "I gather some feedback and try to incorporate it into my designs where I can."
+            },
+            {
+                "competency": "D",
+                "selected_option": "B",
+                "option_text": "I think about possible risks but don\u00e2\u20ac\u2122t always plan for them."
+            },
+            {
+                "competency": "E",
+                "selected_option": "C",
+                "option_text": "I communicate mainly when necessary, but I don't initiate discussions often."
+            },
+            {
+                "competency": "F",
+                "selected_option": "A",
+                "option_text": "I carefully edit my content and ask others for feedback to ensure clarity."
+            }
+        ]
+    },
+    "dynamic_text": "The user is currently a student, interested in designing visuals or user experiences, identifying as beginner (i have little or no practical experience), and can dedicate about 3-6 hours per week to learning. I outline the main tasks and decide on the order in which to tackle them. I analyze all feedback carefully and adjust my approach based on the data. I gather some feedback and try to incorporate it into my designs where I can. I think about possible risks but don\u00e2\u20ac\u2122t always plan for them. I communicate mainly when necessary, but I don't initiate discussions often. I carefully edit my content and ask others for feedback to ensure clarity."
+}

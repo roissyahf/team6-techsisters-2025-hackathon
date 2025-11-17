@@ -2,5 +2,8 @@
 .env
 
 # In progress
-data/roles_competency_matrix.json
-dynamic_questions_model/competency_score_calculation.py
+
+
+# Archieved
+PROCESSING_dynamic_questions/*
+
