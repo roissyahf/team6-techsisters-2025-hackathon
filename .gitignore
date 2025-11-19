@@ -1,8 +1,11 @@
+__init__.py
+__pycache__
+
 # Highly confidential
 .env
 
 # In progress
-
+MODEL_API_dynamic_questions/*
 
 # Archieved
 PROCESSING_dynamic_questions/*

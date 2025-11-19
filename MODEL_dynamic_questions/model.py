@@ -3,6 +3,7 @@
 import json
 import numpy as np
 import pickle
+import argparse
 
 # -------------------------
 # Load static data at startup
@@ -89,14 +90,17 @@ def compute_similarity(user_text):
 # Main recommendation endpoint
 # -------------------------
 
-# use sample final payload (produced using processing.py). just change the path to test with different inputs
-sample_final_payload_path = "FINAL_PAYLOAD/SAMPLE_2_final_payload.json"
-with open(sample_final_payload_path) as f:
-    sample_final_payload = json.load(f)
-
-
-def recommend():
-    data = sample_final_payload
+def recommend(final_payload_path: str):
+    """
+    Generates tech role recommendations based on the user's final payload.
+    
+    Args:
+        final_payload_path: Path to the JSON file containing the processed user data.
+    """
+    
+    # Load the final payload file specified by the argument
+    with open(final_payload_path) as f:
+        data = json.load(f)
 
     user_vector = data["aptitude_vector"]      # 6 floats
     base_persona = data["persona_flags"]       # dict of persona flags
@@ -135,6 +139,26 @@ def recommend():
 
 
 if __name__ == "__main__":
-    top_roles = recommend()
+    parser = argparse.ArgumentParser(
+        description="Run the model to give tech roles recommendations based on user profile"
+    )
+    
+    # Define the final_payload_path argument
+    parser.add_argument(
+        '--final_payload_path', 
+        type=str, 
+        required=True,
+        default="FINAL_PAYLOAD/SAMPLE_final_payload.json", 
+        help="Path to the JSON file containing the processed final payload"
+    )
+
+    args = parser.parse_args()
+
+    # Pass the parsed argument's value to the recommend function
+    top_roles = recommend(args.final_payload_path)
+    
+    print(f"Top 10 Role Recommendations for input: {args.final_payload_path}\n")
+    print("---")
+    
     for idx, role in enumerate(top_roles, 1):
-        print(f"{idx}. {role['role_name']} (Score: {role['score']:.4f})")
+        print(f"{idx}. **{role['role_name']}** (Score: {role['score']:.4f})")
