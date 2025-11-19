@@ -1,12 +1,18 @@
+# Python chace & build files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
 __init__.py
-__pycache__
 
 # Highly confidential
 .env
 
-# In progress
-MODEL_API_dynamic_questions/*
+# In progress code
 
-# Archieved
+# Archieved code
 PROCESSING_dynamic_questions/*
 
