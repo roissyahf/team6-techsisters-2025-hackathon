@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed project plan that outlines objectives, timelines, and user feedback loops to ensure clarity and structure throughout the development process.",
+        "B": "I usually outline the key functionalities and features before starting, ensuring I consider user needs and technical constraints, but I may not document everything.",
+        "C": "I sometimes sketch out a rough idea of the features and start coding, relying on my experience to fill in gaps as I go along.",
+        "D": "I prefer to dive into coding without a structured plan, trusting that I can figure things out as I encounter issues."
+      },
+      "question_text": "When developing a new software feature, how do you approach the task to ensure it meets both technical requirements and user needs?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I consistently analyze user data and metrics to inform my decisions, ensuring I base my strategies on actionable insights.",
+        "B": "I often consult available data to guide my decisions, but I sometimes rely on intuition when I feel confident.",
+        "C": "I occasionally look at data but usually make decisions based on previous experiences and general practices.",
+        "D": "I rarely consider data when making decisions, preferring to rely on my gut feelings or assumptions."
+      },
+      "question_text": "How do you utilize data when making decisions in your projects?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I engage in collaborative brainstorming sessions, prioritizing user feedback to generate innovative and relevant ideas.",
+        "B": "I often think of creative ideas on my own but will seek user input if I have time during the process.",
+        "C": "I occasionally brainstorm alone but don't always consider user needs or feedback in my ideas.",
+        "D": "I usually create ideas in isolation without focusing on user input, trusting my creative instincts."
+      },
+      "question_text": "When brainstorming ideas for a new app, what is your typical approach?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I proactively identify potential risks and develop contingency plans to mitigate them, ensuring project stability.",
+        "B": "I typically assess risks at the beginning of a project and address them as they arise during development.",
+        "C": "I sometimes recognize risks but often focus on getting things done rather than managing them comprehensively.",
+        "D": "I rarely consider risks in my projects, preferring to deal with issues as they come up."
+      },
+      "question_text": "How do you manage potential risks in your projects?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I provide regular updates through structured reports and meetings, ensuring all stakeholders are engaged and aware of progress.",
+        "B": "I usually send out updates at key milestones, but I might not communicate frequently unless something important arises.",
+        "C": "I sometimes share updates informally, but I don't have a set schedule for stakeholder communication.",
+        "D": "I rarely communicate with stakeholders during projects, focusing mainly on my own tasks."
+      },
+      "question_text": "How do you keep stakeholders informed during a project?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I always follow a clear structure and use simple language to make my documentation accessible to all stakeholders.",
+        "B": "I generally try to be clear in my writing, but I may use technical terms that are familiar to me without considering the audience.",
+        "C": "I sometimes write documentation but often skip details, assuming readers will understand the context.",
+        "D": "I rarely write documentation, believing that verbal explanations are sufficient to convey my ideas."
+      },
+      "question_text": "How do you ensure clarity in your written documentation for projects?"
+    }
+  ],
+  "user_context_summary": "expert professional applying for tech roles"
+}

@@ -3,9 +3,9 @@ import json
 import os
 
 # === Configuration ===
-INPUT_FILE = "base_questions/sample.json" # adjust accordingly
+INPUT_FILE = "base_questions/sample_6.json" # adjust accordingly
 OUTPUT_DIR = "RESPONSE_dynamic_questions"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "NEW_SAMPLE_generated_dynamic_questions.json")  # adjust accordingly
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "NEW_SAMPLE_6_generated_dynamic_questions.json")  # adjust accordingly
 API_URL = "http://localhost:7070/generate_dynamic_questions"
 
 # === Ensure output directory exists ===

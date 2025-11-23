@@ -1,0 +1,53 @@
+{
+    "user_id": "USR_20251113_005",
+    "persona_flags": {
+        "beginner": true,
+        "low_time": true,
+        "remote_only": true,
+        "career_break": false
+    },
+    "persona_summary": "The user is currently a working professional (non-tech), interested in coordinating teams or managing projects, identifying as beginner (i have little or no practical experience), and can dedicate about less than 3 hours per week to learning.",
+    "aptitude_vector": [
+        0.5,
+        0.5,
+        0.75,
+        0.5,
+        0.75,
+        1.0
+    ],
+    "dynamic_answers": {
+        "dynamic_answers": [
+            {
+                "competency": "E",
+                "selected_option": "B",
+                "option_text": "I share important information through emails and try to respond to questions promptly, making sure to address concerns as they arise."
+            },
+            {
+                "competency": "A",
+                "selected_option": "C",
+                "option_text": "I start working on the task without a clear plan, relying on my instincts to guide me."
+            },
+            {
+                "competency": "B",
+                "selected_option": "C",
+                "option_text": "I often rely on my past experiences rather than data when making decisions."
+            },
+            {
+                "competency": "C",
+                "selected_option": "B",
+                "option_text": "I consider user needs occasionally but focus more on what I find interesting or innovative."
+            },
+            {
+                "competency": "D",
+                "selected_option": "C",
+                "option_text": "I sometimes notice risks as they arise but usually deal with them reactively rather than proactively."
+            },
+            {
+                "competency": "F",
+                "selected_option": "A",
+                "option_text": "I carefully review my messages for clarity and structure, ensuring they convey my points effectively."
+            }
+        ]
+    },
+    "dynamic_text": "The user is currently a working professional (non-tech), interested in coordinating teams or managing projects, identifying as beginner (i have little or no practical experience), and can dedicate about less than 3 hours per week to learning. I share important information through emails and try to respond to questions promptly, making sure to address concerns as they arise. I start working on the task without a clear plan, relying on my instincts to guide me. I often rely on my past experiences rather than data when making decisions. I consider user needs occasionally but focus more on what I find interesting or innovative. I sometimes notice risks as they arise but usually deal with them reactively rather than proactively. I carefully review my messages for clarity and structure, ensuring they convey my points effectively."
+}

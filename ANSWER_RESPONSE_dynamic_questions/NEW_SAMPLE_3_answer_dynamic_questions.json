@@ -1,0 +1,62 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-13T08:45:00Z",
+    "user_id": "USR_20251113_003",
+    "responses": [
+      {
+        "competency": "A",
+        "competency_name": "Logical & Structured Thinking",
+        "question_text": "When developing a new software feature, how do you approach the task to ensure it meets both technical requirements and user needs?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I create a detailed project plan that outlines objectives, timelines, and user feedback loops to ensure clarity and structure throughout the development process."
+        }
+      },
+      {
+        "competency": "B",
+        "competency_name": "Data & Analytical Insight",
+        "question_text": "How do you utilize data when making decisions in your projects?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I consistently analyze user data and metrics to inform my decisions, ensuring I base my strategies on actionable insights."
+        }
+      },
+      {
+        "competency": "C",
+        "competency_name": "Creative & User-Centricity",
+        "question_text": "When brainstorming ideas for a new app, what is your typical approach?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I engage in collaborative brainstorming sessions, prioritizing user feedback to generate innovative and relevant ideas."
+        }
+      },
+      {
+        "competency": "D",
+        "competency_name": "Systemic & Risk Management",
+        "question_text": "How do you manage potential risks in your projects?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I typically assess risks at the beginning of a project and address them as they arise during development."
+        }
+      },
+      {
+        "competency": "E",
+        "competency_name": "Communication & Stakeholder",
+        "question_text": "How do you keep stakeholders informed during a project?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I provide regular updates through structured reports and meetings, ensuring all stakeholders are engaged and aware of progress."
+        }
+      },
+      {
+        "competency": "F",
+        "competency_name": "Content & Language Fluency",
+        "question_text": "How do you ensure clarity in your written documentation for projects?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I always follow a clear structure and use simple language to make my documentation accessible to all stakeholders."
+        }
+      }
+    ]
+  }
+}

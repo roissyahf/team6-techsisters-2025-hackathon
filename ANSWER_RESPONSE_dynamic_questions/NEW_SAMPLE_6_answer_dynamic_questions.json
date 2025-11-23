@@ -1,0 +1,62 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-13T09:30:00Z",
+    "user_id": "USR_20251113_006",
+    "responses": [
+      {
+        "competency": "F",
+        "competency_name": "Content & Language Fluency",
+        "question_text": "When creating content for a target audience, how do you ensure that your writing resonates and meets their needs?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I often refer to existing content and try to align my work with what has previously been well-received by the audience."
+        }
+      },
+      {
+        "competency": "A",
+        "competency_name": "Logical & Structured Thinking",
+        "question_text": "When faced with a complex project, how do you prioritize your tasks?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I create a detailed plan with deadlines and dependencies, ensuring each task logically leads to the next."
+        }
+      },
+      {
+        "competency": "B",
+        "competency_name": "Data & Analytical Insight",
+        "question_text": "How do you approach analyzing feedback or data on your projects?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I systematically review all feedback, looking for trends and patterns to inform my future work."
+        }
+      },
+      {
+        "competency": "C",
+        "competency_name": "Creative & User-Centricity",
+        "question_text": "When brainstorming new ideas for content, how do you incorporate user perspective?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I consider user needs while brainstorming, but I also focus on my own creative interests."
+        }
+      },
+      {
+        "competency": "D",
+        "competency_name": "Systemic & Risk Management",
+        "question_text": "How do you handle potential risks in your projects?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I recognize some risks but often address them reactively as they occur."
+        }
+      },
+      {
+        "competency": "E",
+        "competency_name": "Communication & Stakeholder",
+        "question_text": "How do you keep stakeholders informed about your project progress?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I share updates occasionally, mostly when significant milestones are reached."
+        }
+      }
+    ]
+  }
+}

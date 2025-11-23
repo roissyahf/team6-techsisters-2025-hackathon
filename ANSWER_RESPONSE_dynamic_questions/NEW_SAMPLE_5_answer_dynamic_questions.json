@@ -1,0 +1,62 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-13T09:15:00Z",
+    "user_id": "USR_20251113_005",
+    "responses": [
+      {
+        "competency": "E",
+        "competency_name": "Communication & Stakeholder",
+        "question_text": "When coordinating a team project with different stakeholders, how do you ensure everyone is aligned and informed about their responsibilities?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I share important information through emails and try to respond to questions promptly, making sure to address concerns as they arise."
+        }
+      },
+      {
+        "competency": "A",
+        "competency_name": "Logical & Structured Thinking",
+        "question_text": "When faced with a complex task, how do you approach organizing your thoughts and actions?",
+        "selected_answer": {
+          "option_key": "C",
+          "answer_text": "I start working on the task without a clear plan, relying on my instincts to guide me."
+        }
+      },
+      {
+        "competency": "B",
+        "competency_name": "Data & Analytical Insight",
+        "question_text": "How do you handle information when making decisions about a project?",
+        "selected_answer": {
+          "option_key": "C",
+          "answer_text": "I often rely on my past experiences rather than data when making decisions."
+        }
+      },
+      {
+        "competency": "C",
+        "competency_name": "Creative & User-Centricity",
+        "question_text": "When brainstorming ideas for a project, how do you ensure that your ideas are user-centered?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I consider user needs occasionally but focus more on what I find interesting or innovative."
+        }
+      },
+      {
+        "competency": "D",
+        "competency_name": "Systemic & Risk Management",
+        "question_text": "How do you identify and manage risks in your projects?",
+        "selected_answer": {
+          "option_key": "C",
+          "answer_text": "I sometimes notice risks as they arise but usually deal with them reactively rather than proactively."
+        }
+      },
+      {
+        "competency": "F",
+        "competency_name": "Content & Language Fluency",
+        "question_text": "How do you ensure clarity and effectiveness in your written communication?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I carefully review my messages for clarity and structure, ensuring they convey my points effectively."
+        }
+      }
+    ]
+  }
+}

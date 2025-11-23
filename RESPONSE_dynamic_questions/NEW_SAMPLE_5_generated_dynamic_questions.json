@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I schedule regular check-ins and provide clear updates to all team members, ensuring everyone understands their roles and deadlines.",
+        "B": "I share important information through emails and try to respond to questions promptly, making sure to address concerns as they arise.",
+        "C": "I occasionally remind the team about their tasks but don’t always follow up on their progress or questions.",
+        "D": "I tend to leave it up to the team to figure out their tasks without much communication or guidance from my side."
+      },
+      "question_text": "When coordinating a team project with different stakeholders, how do you ensure everyone is aligned and informed about their responsibilities?"
+    },
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed outline and break the task into smaller, manageable steps to ensure clarity and direction.",
+        "B": "I jot down my ideas and try to outline a few key steps, though I might miss some details.",
+        "C": "I start working on the task without a clear plan, relying on my instincts to guide me.",
+        "D": "I often find it challenging to organize my thoughts and prefer to dive into the task as it is."
+      },
+      "question_text": "When faced with a complex task, how do you approach organizing your thoughts and actions?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I gather relevant data and analyze it thoroughly before making decisions to ensure they are well-informed.",
+        "B": "I usually look at some data but may not dive deep into analyzing it fully before deciding.",
+        "C": "I often rely on my past experiences rather than data when making decisions.",
+        "D": "I tend to make decisions based on gut feelings without considering any data."
+      },
+      "question_text": "How do you handle information when making decisions about a project?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I actively seek feedback from potential users and incorporate their needs into my brainstorming sessions.",
+        "B": "I consider user needs occasionally but focus more on what I find interesting or innovative.",
+        "C": "I tend to brainstorm without specifically thinking about the users or their preferences.",
+        "D": "I often overlook the user's perspective when generating ideas, focusing solely on my own views."
+      },
+      "question_text": "When brainstorming ideas for a project, how do you ensure that your ideas are user-centered?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I assess potential risks at the start and create contingency plans to address them proactively.",
+        "B": "I consider some risks during the planning phase but may not have detailed plans to handle them.",
+        "C": "I sometimes notice risks as they arise but usually deal with them reactively rather than proactively.",
+        "D": "I often overlook potential risks and focus on executing the project without much consideration."
+      },
+      "question_text": "How do you identify and manage risks in your projects?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I carefully review my messages for clarity and structure, ensuring they convey my points effectively.",
+        "B": "I usually proofread my work but might miss some minor errors or unclear phrasing.",
+        "C": "I write my messages quickly and may not always check for clarity or accuracy.",
+        "D": "I often send messages without proofreading, which can lead to misunderstandings."
+      },
+      "question_text": "How do you ensure clarity and effectiveness in your written communication?"
+    }
+  ],
+  "user_context_summary": "beginner exploring project management"
+}

@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I conduct thorough audience research, using surveys and feedback to tailor my content specifically to their preferences and pain points.",
+        "B": "I often refer to existing content and try to align my work with what has previously been well-received by the audience.",
+        "C": "I usually write based on my understanding of the topic, assuming the audience will relate to my perspective.",
+        "D": "I tend to write what feels right to me without much consideration for the audience's needs or preferences."
+      },
+      "question_text": "When creating content for a target audience, how do you ensure that your writing resonates and meets their needs?"
+    },
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed plan with deadlines and dependencies, ensuring each task logically leads to the next.",
+        "B": "I outline the main tasks and prioritize them based on urgency, although I may not track every detail.",
+        "C": "I tackle tasks as they come up, focusing on what seems most important at the moment.",
+        "D": "I often feel overwhelmed and struggle to determine which tasks to prioritize."
+      },
+      "question_text": "When faced with a complex project, how do you prioritize your tasks?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I systematically review all feedback, looking for trends and patterns to inform my future work.",
+        "B": "I analyze the data to some extent but may not delve deeply into every detail.",
+        "C": "I look at the feedback briefly and usually rely on my instinct for the next steps.",
+        "D": "I often ignore feedback, feeling it's not necessary for my creative process."
+      },
+      "question_text": "How do you approach analyzing feedback or data on your projects?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I actively seek input from users during the brainstorming process to ensure their needs are central to my ideas.",
+        "B": "I consider user needs while brainstorming, but I also focus on my own creative interests.",
+        "C": "I primarily generate ideas based on what I find interesting, with less regard for user feedback.",
+        "D": "I usually brainstorm in solitude, rarely thinking about the user's perspective."
+      },
+      "question_text": "When brainstorming new ideas for content, how do you incorporate user perspective?"
+    },
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I proactively identify potential risks and develop contingency plans to mitigate them before they arise.",
+        "B": "I recognize some risks but often address them reactively as they occur.",
+        "C": "I tend to overlook risks, focusing more on completing the project without much forethought.",
+        "D": "I usually ignore risks, believing they won't affect my project significantly."
+      },
+      "question_text": "How do you handle potential risks in your projects?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I provide regular updates through structured reports and meetings, ensuring everyone is aligned.",
+        "B": "I share updates occasionally, mostly when significant milestones are reached.",
+        "C": "I communicate informally, relying on casual conversations to inform stakeholders.",
+        "D": "I often forget to update stakeholders, focusing more on the work than on communication."
+      },
+      "question_text": "How do you keep stakeholders informed about your project progress?"
+    }
+  ],
+  "user_context_summary": "intermediate job seeker in content"
+}
