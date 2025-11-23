@@ -186,6 +186,20 @@ def generate_dynamic_questions(persona_data: Dict[str, str], num_questions=6) ->
     
     6. The question for the user's declared primary interest ('{persona_data['Raw_Interest']}') must be more detailed and more probing than the others.
     
+    - exactly ONE question  
+    - significantly more detailed  
+    - based on a realistic scenario in that interest area  
+    - deeper, richer, and more specific than the other 5  
+    - containing more nuance, context, and behavioral depth  
+    - measuring HOW the user behaves in situations relevant to that field
+
+    RULES FOR THIS ONE DEEP QUESTION:
+    - The scenario MUST be meaningfully tied to the field (Data, Software, Design, Infra, PM, Content) WITHOUT using technical jargon.
+    - The answer options MUST include field-relevant behavioral differences, NOT technical differences.
+    - Make sure this question feels personalized to the user's persona AND their chosen field.
+    - This deep question MUST appear FIRST in the final list of 6.
+    - The competency of this deep question MUST match the user's primary mapped competency (A-F).
+
     7. Absolutely NO technical references (e.g., Python, SQL, UX design tools).
     
     8. Your final JSON MUST pass the provided Pydantic validation.
@@ -250,6 +264,12 @@ def generate_dynamic_questions(persona_data: Dict[str, str], num_questions=6) ->
     - Primary Interest Area: {persona_data['Raw_Interest']}
     - Primary Competency Focus: {persona_data['Primary_Interest_Field']}
 
+    IMPORTANT REQUIREMENTS FOR GENERATION:
+    - The VERY FIRST question must be the deep, personalized question aligned to the user's primary interest area.
+    - The remaining 5 questions must be general behavioral assessments covering the remaining 5 competencies.
+    - Do NOT generate 2 deep questions. Only ONE deep question is allowed.
+    - Do NOT generate a deep question for any other competency.
+ 
     Generate the 6 required questions now.
     """
     
