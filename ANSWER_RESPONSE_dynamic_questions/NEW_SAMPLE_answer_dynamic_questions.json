@@ -1,0 +1,62 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-11T20:15:00Z",
+    "user_id": "USR_20251111_001",
+    "responses": [
+      {
+        "competency": "C",
+        "competency_name": "Creative & User-Centricity",
+        "question_text": "When you're tasked with creating a visual or user experience, how do you ensure that it resonates with your target audience?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I often sketch multiple ideas and seek input from peers to refine my design choices before finalizing them."
+        }
+      },
+      {
+        "competency": "A",
+        "competency_name": "Logical & Structured Thinking",
+        "question_text": "How do you approach organizing your tasks when you have multiple deadlines to meet?",
+        "selected_answer": {
+          "option_key": "C",
+          "answer_text": "I usually just start working on tasks as they come up, without a specific plan or schedule."
+        }
+      },
+      {
+        "competency": "B",
+        "competency_name": "Data & Analytical Insight",
+        "question_text": "How do you utilize data when making decisions on your projects?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I look at data reports when available, but I often rely more on instinct than on analysis."
+        }
+      },
+      {
+        "competency": "D",
+        "competency_name": "Systemic & Risk Management",
+        "question_text": "When planning a project, how do you identify and address potential risks?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I proactively list potential risks and develop strategies to mitigate them before starting the project."
+        }
+      },
+      {
+        "competency": "E",
+        "competency_name": "Communication & Stakeholder",
+        "question_text": "How do you ensure effective communication with team members on a collaborative project?",
+        "selected_answer": {
+          "option_key": "B",
+          "answer_text": "I share updates occasionally and respond to messages, but I may not always initiate communication."
+        }
+      },
+      {
+        "competency": "F",
+        "competency_name": "Content & Language Fluency",
+        "question_text": "How do you approach creating content for your projects?",
+        "selected_answer": {
+          "option_key": "A",
+          "answer_text": "I carefully craft my content, ensuring clarity and relevance for the intended audience."
+        }
+      }
+    ]
+  }
+}

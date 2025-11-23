@@ -15,10 +15,10 @@
       {
         "competency": "B",
         "competency_name": "Data & Analytical Insight",
-        "question_text": "When analyzing data for a project, what approach do you take to derive insights?",
+        "question_text": "When analyzing a dataset for a project, how do you typically approach the task to ensure you derive meaningful insights?",
         "selected_answer": {
           "option_key": "A",
-          "answer_text": "I systematically dissect data sets, looking for patterns and correlations to inform my conclusions."
+          "answer_text": "I start by defining clear objectives and then explore the data thoroughly to uncover patterns before making informed decisions."
         }
       },
       {

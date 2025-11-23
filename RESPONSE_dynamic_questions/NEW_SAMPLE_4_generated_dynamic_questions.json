@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "competency": "D",
+      "competency_name": "Systemic & Risk Management",
+      "options": {
+        "A": "I immediately assess the situation, gather data from various sources, and implement a clear response plan to mitigate risks.",
+        "B": "I check for any obvious issues and consult with team members before deciding on a course of action.",
+        "C": "I tend to analyze the situation but may take time to act, often waiting for more information before making decisions.",
+        "D": "I usually feel overwhelmed by the situation and may struggle to take any decisive action."
+      },
+      "question_text": "When faced with a potential security breach in a system you manage, how do you approach the situation?"
+    },
+    {
+      "competency": "A",
+      "competency_name": "Logical & Structured Thinking",
+      "options": {
+        "A": "I create a detailed plan with milestones and deadlines, breaking tasks down into manageable steps.",
+        "B": "I outline key tasks and prioritize them, but may not follow a strict timeline.",
+        "C": "I write down tasks as they come to mind, often leading to a less organized approach.",
+        "D": "I usually dive into tasks without much planning, relying on my instinct to guide me."
+      },
+      "question_text": "How do you typically organize your tasks when starting a new project?"
+    },
+    {
+      "competency": "B",
+      "competency_name": "Data & Analytical Insight",
+      "options": {
+        "A": "I systematically review all relevant data, looking for patterns and insights that inform my decision.",
+        "B": "I focus on key metrics that seem most relevant and use them to guide my choices.",
+        "C": "I tend to look at the data but often get confused and may miss critical insights.",
+        "D": "I usually avoid deep analysis and rely on surface-level information to make decisions."
+      },
+      "question_text": "When analyzing data for a decision, how do you proceed?"
+    },
+    {
+      "competency": "C",
+      "competency_name": "Creative & User-Centricity",
+      "options": {
+        "A": "I actively seek user feedback and integrate it into my process to enhance solutions and experiences.",
+        "B": "I listen to user feedback and make adjustments when they seem important to the project.",
+        "C": "I collect feedback but often find it difficult to determine how to apply it effectively.",
+        "D": "I don’t usually prioritize user feedback in my work, focusing more on my own ideas."
+      },
+      "question_text": "How do you incorporate user feedback into your work?"
+    },
+    {
+      "competency": "E",
+      "competency_name": "Communication & Stakeholder",
+      "options": {
+        "A": "I regularly update my team through meetings and written reports, encouraging open dialogue.",
+        "B": "I communicate important updates but may not engage in regular discussions.",
+        "C": "I sometimes share information but often forget to follow up with my team.",
+        "D": "I tend to keep communication minimal and rely on others to reach out to me."
+      },
+      "question_text": "How do you ensure effective communication with your team?"
+    },
+    {
+      "competency": "F",
+      "competency_name": "Content & Language Fluency",
+      "options": {
+        "A": "I carefully craft my messages, ensuring they are clear and concise while addressing all important points.",
+        "B": "I write my emails or reports with a focus on clarity, but sometimes miss minor details.",
+        "C": "I write messages quickly, which can lead to unclear communication or errors.",
+        "D": "I often struggle with writing and may avoid it altogether when possible."
+      },
+      "question_text": "How do you approach writing professional emails or reports?"
+    }
+  ],
+  "user_context_summary": "beginner career switcher into cybersecurity"
+}

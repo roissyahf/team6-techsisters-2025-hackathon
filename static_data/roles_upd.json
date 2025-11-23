@@ -1,0 +1,547 @@
+[
+  {
+    "role_id": "R01",
+    "role_name": "Frontend Engineer",
+    "weights": {
+      "A_logic": 1.0,
+      "B_data": 0.5,
+      "C_creative": 0.75,
+      "D_systemic": 0.5,
+      "E_communication": 0.25,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R02",
+    "role_name": "Backend Engineer",
+    "weights": {
+      "A_logic": 1.0,
+      "B_data": 0.75,
+      "C_creative": 0.25,
+      "D_systemic": 0.5,
+      "E_communication": 0.25,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R03",
+    "role_name": "Full-Stack Engineer",
+    "weights": {
+      "A_logic": 1.0,
+      "B_data": 0.5,
+      "C_creative": 0.5,
+      "D_systemic": 0.5,
+      "E_communication": 0.5,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R04",
+    "role_name": "Software Engineer",
+    "weights": {
+      "A_logic": 1.0,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 0.5,
+      "E_communication": 0.25,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R05",
+    "role_name": "Quality Assurance Engineer",
+    "weights": {
+      "A_logic": 1.0,
+      "B_data": 0.25,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 0.5,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+
+  {
+    "role_id": "R06",
+    "role_name": "Data Analyst",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 1.0,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 0.5,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R07",
+    "role_name": "Data Scientist",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 1.0,
+      "C_creative": 0.25,
+      "D_systemic": 0.5,
+      "E_communication": 0.25,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R08",
+    "role_name": "Machine Learning Engineer",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 1.0,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 0.25,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R09",
+    "role_name": "Business Intelligence Analyst",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 1.0,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 0.75,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R10",
+    "role_name": "Data Engineer",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 1.0,
+      "C_creative": 0.25,
+      "D_systemic": 0.5,
+      "E_communication": 0.25,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+
+  {
+    "role_id": "R11",
+    "role_name": "UX Designer",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 1.0,
+      "D_systemic": 0.75,
+      "E_communication": 0.75,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R12",
+    "role_name": "UI Designer",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 1.0,
+      "D_systemic": 0.5,
+      "E_communication": 0.25,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R13",
+    "role_name": "Product Designer",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 0.25,
+      "C_creative": 1.0,
+      "D_systemic": 0.75,
+      "E_communication": 0.75,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["hybrid"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R14",
+    "role_name": "Interaction Designer",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 1.0,
+      "D_systemic": 0.5,
+      "E_communication": 0.5,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R15",
+    "role_name": "Frontend Developer",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 1.0,
+      "D_systemic": 0.25,
+      "E_communication": 0.25,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+
+  {
+    "role_id": "R16",
+    "role_name": "Cybersecurity Engineer",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 1.0,
+      "E_communication": 0.25,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R17",
+    "role_name": "Cloud Architect",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 1.0,
+      "E_communication": 0.75,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["hybrid"],
+      "skill_level": ["expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R18",
+    "role_name": "DevOps Engineer",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 1.0,
+      "E_communication": 0.5,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R19",
+    "role_name": "Site Reliability Engineer",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 1.0,
+      "E_communication": 0.25,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["gt_10h"],
+      "remote": ["onsite"],
+      "skill_level": ["expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R20",
+    "role_name": "Network Engineer",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 0.25,
+      "C_creative": 0.0,
+      "D_systemic": 1.0,
+      "E_communication": 0.25,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["onsite"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "no"
+    }
+  },
+
+  {
+    "role_id": "R21",
+    "role_name": "Product Manager",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 0.5,
+      "C_creative": 0.5,
+      "D_systemic": 0.75,
+      "E_communication": 1.0,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["hybrid"],
+      "skill_level": ["intermediate", "expert"],
+      "career_break_friendly": "no"
+    }
+  },
+  {
+    "role_id": "R22",
+    "role_name": "Project Manager",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 0.25,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 1.0,
+      "F_execution": 0.75
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R23",
+    "role_name": "Program Manager",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 0.25,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 1.0,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["hybrid"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R24",
+    "role_name": "Business Analyst",
+    "weights": {
+      "A_logic": 0.75,
+      "B_data": 0.75,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 1.0,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R25",
+    "role_name": "IT Consultant",
+    "weights": {
+      "A_logic": 0.5,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 1.0,
+      "F_execution": 0.5
+    },
+    "tags": {
+      "time_commitment": ["h7_10"],
+      "remote": ["onsite", "hybrid"],
+      "skill_level": ["intermediate"],
+      "career_break_friendly": "no"
+    }
+  },
+
+  {
+    "role_id": "R26",
+    "role_name": "Technical Writer",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 0.25,
+      "D_systemic": 0.75,
+      "E_communication": 0.5,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R27",
+    "role_name": "Content Strategist",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 0.5,
+      "D_systemic": 0.75,
+      "E_communication": 0.75,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R28",
+    "role_name": "SEO Specialist",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.5,
+      "C_creative": 0.25,
+      "D_systemic": 0.5,
+      "E_communication": 0.5,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner", "intermediate"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R29",
+    "role_name": "Digital Marketing Specialist",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.25,
+      "C_creative": 0.75,
+      "D_systemic": 0.5,
+      "E_communication": 0.5,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["h3_6"],
+      "remote": ["remote", "hybrid"],
+      "skill_level": ["beginner"],
+      "career_break_friendly": "yes"
+    }
+  },
+  {
+    "role_id": "R30",
+    "role_name": "Copywriter",
+    "weights": {
+      "A_logic": 0.25,
+      "B_data": 0.0,
+      "C_creative": 0.75,
+      "D_systemic": 0.75,
+      "E_communication": 0.75,
+      "F_execution": 1.0
+    },
+    "tags": {
+      "time_commitment": ["lt_3h"],
+      "remote": ["remote"],
+      "skill_level": ["beginner"],
+      "career_break_friendly": "yes"
+    }
+  }
+]

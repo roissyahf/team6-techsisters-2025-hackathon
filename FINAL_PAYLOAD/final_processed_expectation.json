@@ -1,9 +1,0 @@
-{
-  "user_id":"USR_001",
-  "persona_flags": { "beginner": true, "low_time": false, "remote_only": false, "career_break": false },
-  "aptitude_vector": [0.8,0.4,0.9,0.2,0.6,0.5],
-  "dynamic_answers": [
-    {"id":"Q_DYN_1","competency":"C","selected_option":"A","option_text":"Always think about the user's experience first."},
-    {"id":"Q_DYN_2","competency":"A","selected_option":"B","option_text":"I often plan steps but sometimes try different ways."}
-  ]
-}
