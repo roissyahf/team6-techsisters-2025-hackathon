@@ -15,5 +15,4 @@ __init__.py
 scripts/test_aptitude.py
 
 # Archieved code
-PROCESSING_dynamic_questions/*
 

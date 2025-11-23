@@ -1,217 +1,208 @@
-import json
 import numpy as np
-import pickle
-from typing import Dict, Any, List, Tuple
-from pathlib import Path
+import json
+from typing import Dict, Any, List
+from services.rec_explanation import generate_tech_rec_explanation
 
-# --- Configuration & Path Setup ---
-BASE_DIR = Path(__file__).resolve().parents[2]
-STATIC_DATA_PATH = BASE_DIR / "static_data"
-PICKLE_PATH = BASE_DIR / "pickle_file"
-
-print("BASE_DIR:", BASE_DIR)
-print("STATIC_DATA_PATH:", STATIC_DATA_PATH)
-print("PICKLE_PATH:", PICKLE_PATH)
-
-# --- 1. Singleton Model and Data Loading (Runs ONLY ONCE on import) ---
-try:
-    with open(STATIC_DATA_PATH / "roles.json", 'r') as f:
-        ROLES = json.load(f)
-    with open(STATIC_DATA_PATH / "constraints.json", 'r') as f:
-        CONSTRAINTS = json.load(f)
-    
-    VECTORIZER = pickle.load(open(PICKLE_PATH / "tfidf.pkl", "rb"))
-    ROLE_IDS, ROLE_TFIDF_MATRIX = pickle.load(open(PICKLE_PATH / "role_tfidf_matrix.pkl", "rb"))
-    
-    # Static data for hybrid scoring weight
-    WEIGHT_WSM = 0.6
-    WEIGHT_TFIDF = 0.4
-    
-    print("✅ Recommender Engine: All models and static data loaded successfully.")
-
-except Exception as e:
-    print(f"FATAL ERROR: Could not load required model assets. {e}")
-    raise RuntimeError("Recommender Engine initialization failed.")
+# -------------------------
+# Loader (used by app.py)
+# -------------------------
+def load_json_data(filepath: str) -> Dict[str, Any]:
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 
-# =====================================================================
-# --- 2. Processing Helper Functions (Data Transformation) ---
-# Renamed to start with _ to signify internal use only
-# =====================================================================
-
-def _build_pesona_flags(data: Dict[str, Any]) -> Dict[str, bool]:
-    """Calculates persona flags based on base questions response answers."""
-    responses = data.get('user_profile', {}).get('responses', {})
-    q6_answer = responses.get('Q6_skill_level', {}).get('answer', '')
-    is_beginner = q6_answer == "Beginner (I have little or no practical experience)"
-    q9_answer = responses.get('Q9_time_commitment', {}).get('answer', '')
-    is_low_time = q9_answer == "Less than 3 hours"
-    q1_answer = responses.get('Q1_current_status', {}).get('answer', '')
-    is_career_break = q1_answer == "Career Switcher"
-    q5_answer = responses.get('Q5_motivation', {}).get('answer', '')
-    is_remote_only = q5_answer == "Flexibility / Remote work"
-    return {
-        "beginner": is_beginner,
-        "low_time": is_low_time,
-        "remote_only": is_remote_only,
-        "career_break": is_career_break
-    }
-
-def _build_user_persona_summary(user_profile_json: Dict[str, Any]) -> str:
-    """Use base Q1, Q4, Q6, Q9 to Build user persona summary."""
-    responses = user_profile_json.get("user_profile", {}).get("responses", {})
-    situation = responses.get("Q1_current_status", {}).get("answer", "Unknown status")
-    interest_area = responses.get("Q4_interest_area", {}).get("answer", "general interest in tech")
-    skill_level = responses.get("Q6_skill_level", {}).get("answer", "beginner level")
-    time = responses.get("Q9_time_commitment", {}).get("answer", "a few hours")
-    persona_summary = (
-        f"The user is currently a {situation.lower()}, "
-        f"interested in {interest_area.lower()}, "
-        f"identifying as {skill_level.lower()}, "
-        f"and can dedicate about {time.lower()} per week to learning."
-    )
-    return persona_summary.strip()
-
-def _simplify_response_structure(data: Dict[str, Any]) -> Dict[str, Any]:
-    """Transforms the dynamic answers JSON into a simplified structure."""
-    raw_responses: List[Dict[str, Any]] = data.get("user_profile", {}).get("responses", [])
-    simplified_answers = []
-    for resp in raw_responses:
-        competency = resp["competency"]
-        answer = resp["selected_answer"]
-        simplified_answers.append({
-            "competency": competency,
-            "selected_option": answer["option_key"],
-            "option_text": answer["answer_text"] 
-        })
-    return {"dynamic_answers": simplified_answers}
-
-
-def _build_dynamic_text(persona_summary: str, simplified_data: Dict[str, Any]) -> str:
-    """Concatenates a persona summary with all chosen option_texts."""
-    answer_texts = [
-        str(a["option_text"]).strip() 
-        for a in simplified_data.get("dynamic_answers", []) 
-        if "option_text" in a and str(a["option_text"]).strip()
-    ]
-    cleaned_texts = [t.rstrip('.').rstrip(' ').strip() for t in answer_texts]
-    joined_answers = ". ".join(cleaned_texts)
-    persona_part = persona_summary.rstrip(".").strip() + "."
-    if joined_answers:
-        final_document = f"{persona_part} {joined_answers}."
-    else:
-        final_document = persona_part
-    return final_document.strip()
-
-def _mapping_competency_scores(data: Dict[str, Any]) -> Tuple[float, ...]:
-    """Directly converts dynamic competency answers to the ordered aptitude vector."""
-    responses = data.get('user_profile', {}).get('responses', {})
-    option_weights = {'A': 1.0, 'B': 0.75, 'C': 0.5, 'D': 0.25}
-    COMPETENCIES = ['A', 'B', 'C', 'D', 'E', 'F']
-    raw_scores: Dict[str, float] = {comp: 0.0 for comp in COMPETENCIES}
-    
-    for r in responses:
-        comp = r.get('competency')
-        opt = r.get('selected_answer', {}).get('option_key') 
-        weight = option_weights.get(opt, 0.0) 
-        if comp in raw_scores:
-            raw_scores[comp] = weight
-
-    return tuple(raw_scores[comp] for comp in COMPETENCIES)
-
-
-# =====================================================================
-# --- 3. Modeling Helper Functions (Inference) ---
-# =====================================================================
-
-def _compute_wsm_score(user_vector, role_weights):
-    """Calculates Weighted Scoring Model score."""
+# -------------------------
+# WSM scoring
+# -------------------------
+def compute_wsm_score(user_vector, role_weights):
     w = np.array([
         role_weights["A_logic"],
         role_weights["B_data"],
         role_weights["C_creative"],
-        role_weights["D_communication"],
-        role_weights["E_empowerment"],
+        role_weights["D_systemic"],
+        role_weights["E_communication"],
         role_weights["F_execution"],
     ])
     u = np.array(user_vector)
+
     return float(np.dot(u, w) / (np.linalg.norm(u) * np.linalg.norm(w) + 1e-9))
 
-def _apply_constraints(base_persona, role):
-    """Multiplies score based on user persona flags and role tags (Penalty/Bonus)."""
-    factor = 1.0
-    for key in base_persona:
-        if key not in CONSTRAINTS:
-            continue
-        rule = CONSTRAINTS[key]
-        role_value = role["tags"].get(rule.get("tag_key", "skill_level"))
-        if "penalty" in rule and role_value in rule["applies_to"]:
-            factor *= rule["penalty"]
-        if "bonus" in rule and role_value in rule["applies_to"]:
-            factor *= rule["bonus"]
-    return factor
 
-def _compute_similarity(user_text):
-    """Calculates TF-IDF Cosine Similarity."""
-    user_vec = VECTORIZER.transform([user_text])
-    sims = (ROLE_TFIDF_MATRIX @ user_vec.T).toarray().flatten()
+# -------------------------
+# Role constraints matching
+# -------------------------
+def match_user_to_role_constraints(user_constraints: Dict[str, Any], role_constraints: Dict[str, Any]) -> float:
+    score = 1.0
+
+    if "time_commitment" in user_constraints:
+        if user_constraints["time_commitment"] not in role_constraints.get("time_commitment", []):
+            score *= 0.78
+
+    if "work_preference" in user_constraints:
+        if user_constraints["work_preference"] not in role_constraints.get("work_preference", []):
+            score *= 0.88
+
+    if "skill_level" in user_constraints:
+        if user_constraints["skill_level"] not in role_constraints.get("skill_level", []):
+            score *= 0.72
+
+    if user_constraints.get("career_break"):
+        if not role_constraints.get("career_break_friendly", False):
+            score *= 0.75
+
+    return float(score)
+
+
+# -------------------------
+# Persona modifiers
+# -------------------------
+def apply_persona_modifiers(wsm_score, persona_flags: Dict[str, bool], role: Dict[str, Any]) -> float:
+
+    multiplier = 1.0
+    tags = role.get("tags", {}) or role.get("constraints", {})
+
+    def _get_tag_as_lower_str(tag_key: str, default: str = "") -> str:
+        value = tags.get(tag_key, default)
+        if isinstance(value, list) and value:
+            value = value[0]
+        return str(value).lower()
+
+    skill_level_tag = _get_tag_as_lower_str("skill_level")
+    if persona_flags.get("beginner") and skill_level_tag not in ["beginner", "beginner_friendly", "intermediate"]:
+        multiplier *= 0.60
+
+    time_commitment_tag = _get_tag_as_lower_str("time_commitment")
+    if persona_flags.get("low_time") and time_commitment_tag not in ["less than 3 hours", "3-6 hour", "3-6 hours", "3 to 6 hours"]:
+        multiplier *= 0.68
+
+    if persona_flags.get("remote_only"):
+        work_mode = tags.get("remote", tags.get("work_preference", ""))
+        if isinstance(work_mode, list) and work_mode:
+            work_mode = work_mode[0]
+        work_mode = str(work_mode).lower()
+        if "remote" not in work_mode:
+            multiplier *= 0.70
+
+    if persona_flags.get("career_break") and not tags.get("career_break_friendly", False):
+        multiplier *= 0.75
+
+    return float(wsm_score * multiplier)
+
+
+# -------------------------
+# Final score combining WSM + TF-IDF
+# -------------------------
+def compute_final_role_score(user_vector, role, persona_flags, user_constraints, tfidf_score):
+    wsm = compute_wsm_score(user_vector, role["weights"])
+    role_constraints = role.get("constraints") or role.get("tags") or {}
+    constraint_factor = match_user_to_role_constraints(user_constraints, role_constraints)
+
+    wsm *= constraint_factor
+    wsm = apply_persona_modifiers(wsm, persona_flags, role)
+
+    return float(0.6 * wsm + 0.4 * tfidf_score)
+
+
+# -------------------------
+# TF-IDF similarity
+# -------------------------
+def compute_similarity(user_text: str, vectorizer, role_tfidf_matrix):
+    user_vec = vectorizer.transform([user_text])
+    sims = (role_tfidf_matrix @ user_vec.T).toarray().flatten()
     return sims
 
-# =====================================================================
-# --- 4. Main Public Entry Point ---
-# =====================================================================
 
-def get_recommendations(base_persona_data: Dict[str, Any], dynamic_questions_data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """
-    Main entry point for the API. Processes raw data and generates recommendations.
-    
-    Args:
-        base_persona_data: JSON data for base questions (Q1, Q4, Q6, Q9).
-        dynamic_questions_data: JSON data for dynamic competency answers (A-F).
-        
-    Returns:
-        A list of dictionaries for the top recommended roles.
-    """
-    
-    # 1. Processing (Feature Engineering)
-    
-    # Base Persona
-    base_persona = _build_pesona_flags(base_persona_data)
-    persona_summary = _build_user_persona_summary(base_persona_data)
-    
-    # Dynamic Answers
-    simplify_dynamic_response = _simplify_response_structure(dynamic_questions_data)
-    dynamic_text = _build_dynamic_text(persona_summary, simplify_dynamic_response)
-    user_vector = _mapping_competency_scores(dynamic_questions_data) # aptitude_vector
+# -------------------------
+# MAIN recommendation function (used by Flask)
+# -------------------------
+def recommend(final_payload: Dict[str, Any],
+              roles: List[Dict[str, Any]],
+              vectorizer,
+              role_ids,
+              role_tfidf_matrix) -> List[Dict[str, Any]]:
 
-    # 2. Model Inference (Scoring)
-    
-    # Get all TF-IDF scores in one go
-    tfidf_scores = _compute_similarity(dynamic_text)
-    
+    user_vector = final_payload["aptitude_vector"]
+    persona_flags = final_payload["persona_flags"]
+    persona_summary = final_payload.get("persona_summary", "").lower()
+
+    # Build user constraints
+    user_constraints = {
+        "career_break": persona_flags.get("career_break", False)
+    }
+
+    # Time commitment
+    for option in ["less than 3 hours", "3-6 hours", "7-10 hours", "10+ hours"]:
+        if option in persona_summary:
+            user_constraints["time_commitment"] = option
+            break
+
+    # Skill level
+    for s in ["beginner", "intermediate", "expert"]:
+        if s in persona_summary:
+            user_constraints["skill_level"] = s
+            break
+
+    # Work preference
+    if "remote" in persona_summary or persona_flags.get("remote_only"):
+        user_constraints["work_preference"] = "remote"
+
+    # Compute tf-idf similarity
+    text = final_payload["dynamic_text"]
+    tfidf_scores = compute_similarity(text, vectorizer, role_tfidf_matrix)
+
     results = []
-    
-    for i, role in enumerate(ROLES):
-        # WSM Score
-        wsm_score = _compute_wsm_score(user_vector, role["weights"])
-        
-        # Apply Constraints/Penalty/Bonus
-        factor = _apply_constraints(base_persona, role)
-        wsm_adj = wsm_score * factor
-        
-        # TF-IDF Score
-        tfidf_score = float(tfidf_scores[i])
-        
-        # Final hybrid score: 0.6 * WSM_adj + 0.4 * TFIDF
-        final_score = (WEIGHT_WSM * wsm_adj) + (WEIGHT_TFIDF * tfidf_score)
-        
+    for i, role in enumerate(roles):
+        wsm_score = compute_wsm_score(user_vector, role["weights"])
+        final_score = compute_final_role_score(
+            user_vector,
+            role,
+            persona_flags,
+            user_constraints,
+            float(tfidf_scores[i])
+        )
+
+        # --- NEW: Build role_meta for explanation ---
+        role_meta = {
+            "role_name": role["role_name"],
+            "weight_vector": {
+                "A": role["weights"]["A_logic"],
+                "B": role["weights"]["B_data"],
+                "C": role["weights"]["C_creative"],
+                "D": role["weights"]["D_systemic"],
+                "E": role["weights"]["E_communication"],
+                "F": role["weights"]["F_execution"]
+            }
+        }
+
+        # --- NEW: Generate explanation ---
+        explanation = generate_tech_rec_explanation(
+            role_id=role["role_id"],
+            role_meta=role_meta,
+            wsm_score=wsm_score,
+            tfidf_similarity=float(tfidf_scores[i]),
+            final_score=final_score,
+            user_aptitude_vector={
+                "A": user_vector[0],
+                "B": user_vector[1],
+                "C": user_vector[2],
+                "D": user_vector[3],
+                "E": user_vector[4],
+                "F": user_vector[5],
+            },
+            user_constraints_flags={
+                "beginner_penalty_applied": persona_flags.get("beginner", False),
+                "time_penalty_applied": persona_flags.get("low_time", False),
+                "career_switch_bonus": persona_flags.get("career_break", False)
+            }
+        )
+
         results.append({
             "role_id": role["role_id"],
             "role_name": role["role_name"],
-            "score": final_score
+            "score": final_score,
+            "tfidf": float(tfidf_scores[i]),
+            "explanation": explanation
         })
 
-    # 3. Final Output
-    ranked = sorted(results, key=lambda x: x["score"], reverse=True)
-    
-    return ranked[:10]
+    # Return top 3 (adjust as needed)
+    return sorted(results, key=lambda x: x["score"], reverse=True)[:3]
