@@ -135,7 +135,7 @@ curl -X POST http://localhost:7070/generate_dynamic_questions -H "Content-Type: 
 ### **2. Data Processing Script**
 This step transforms the raw base and dynamic question responses into a unified input payload for the recommendation model.
 ```bash
-python model/processing.py --base base_questions/sample.json --dynamic ANSWER_RESPONSE_dynamic_questions/SAMPLE_answer_dynamic_questions.json --output FINAL_PAYLOAD/SAMPLE_final_payload.json
+python MODEL_dynamic_questions/processing.py --base base_questions/sample.json --dynamic ANSWER_RESPONSE_dynamic_questions/SAMPLE_answer_dynamic_questions.json --output FINAL_PAYLOAD/SAMPLE_final_payload.json
 ```
 
 > Note: Update the file paths (`--base, --dynamic, --output`) as needed.
