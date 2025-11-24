@@ -94,9 +94,9 @@ def generate_tech_rec_explanation(
         f"competencies align with what this role values most, particularly {strong_text}. "
         f"{pref_text} "
         f"{constraint_text} "
-        f"Overall, this role achieved a final suitability score of {final_score:.2f}, "
-        f"with a competency match score of {wsm_score:.2f} "
-        f"and an interest-alignment score of {tfidf_similarity:.2f}."
+        f"Overall, this role achieved a final suitability score of {final_score:.2f}."
+        #f"with a competency match score of {wsm_score:.2f} "
+        #f"and an interest-alignment score of {tfidf_similarity:.2f}."
     )
 
     return explanation
