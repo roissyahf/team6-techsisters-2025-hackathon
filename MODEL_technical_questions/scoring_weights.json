@@ -1,0 +1,22 @@
+{
+  "technical_questions": {
+    "programming": 0.30,
+    "problem_solving": 0.25,
+    "debugging": 0.20,
+    "system_understanding": 0.15,
+    "tools_familiarity": 0.10
+  },
+  "base_features": {
+    "interest_tech": 0.25,
+    "experience_level": 0.20,
+    "learning_commitment": 0.10,
+    "motivation_career": 0.10,
+    "motivation_flexibility": 0.05,
+    "motivation_money": 0.05,
+    "preference_data": 0.10,
+    "preference_building": 0.10,
+    "preference_design": 0.10,
+    "preference_management": 0.10,
+    "preference_content": 0.10
+  }
+}
