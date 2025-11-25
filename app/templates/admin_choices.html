@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Choices{% endblock %}
+{% block content %}
+<h2>Choices</h2>
+<form method="post" action="/admin/choices">
+  <label>Question
+    <select name="question_id" required>
+      <option value="">-- choose --</option>
+      {% for q in questions %}
+      <option value="{{ q.id }}">#{{ q.id }} {{ q.prompt[:60] }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Label <input type="text" name="label" required></label>
+  <label>Value <input type="text" name="value" required></label>
+  <label>Position <input type="number" name="position" value="0"></label>
+  <label>Meta (JSON) <textarea name="meta" rows="3"></textarea></label>
+  <button type="submit">Create</button>
+</form>
+<table>
+  <thead><tr><th>ID</th><th>Question</th><th>Label</th><th>Value</th><th>Pos</th></tr></thead>
+  <tbody>
+    {% for c in choices %}
+    <tr>
+      <td>{{ c.id }}</td>
+      <td>#{{ c.question_id }}</td>
+      <td>{{ c.label }}</td>
+      <td><code>{{ c.value }}</code></td>
+      <td>{{ c.position }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
