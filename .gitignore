@@ -12,8 +12,6 @@ __init__.py
 .env
 
 # In progress code
-scripts/test_aptitude.py
-API_ACTION_PLAN/*
 
 # Archieved code
 

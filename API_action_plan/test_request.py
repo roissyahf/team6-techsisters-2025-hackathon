@@ -1,0 +1,33 @@
+import requests
+import json
+
+url = "http://127.0.0.1:9000/generate-action-plan"
+
+payload = {
+  "persona_json": {
+    "user_profile": {
+      "timestamp": "2025-11-13T08:30:00Z",
+      "user_id": "USR_20251113_002",
+      "responses": {
+        "Q1_current_status": {"question": "What best describes your current situation?", "answer": "Working Professional (Non-Tech)"},
+        "Q2_tech_familiarity": {"question": "How familiar are you with technology and digital tools?", "answer": "Comfortable"},
+        "Q3_tech_experience": {"question": "Have you ever taken a course, training, or worked on a project related to tech?", "answer": "Yes"},
+        "Q4_interest_area": {"question": "Which of these areas interests you the most?", "answer": "Working with data and insights"},
+        "Q5_motivation": {"question": "What motivates you most to pursue a tech career?", "answer": "Problem-solving"},
+        "Q6_skill_level": {"question": "How would you describe your current technical skill level?", "answer": "Intermediate (I have some hands-on experience or projects)"},
+        "Q7_project_experience": {"question": "Have you ever completed a personal or professional tech project?", "answer": "Yes, small projects"},
+        "Q8_learning_preference": {"question": "How do you prefer to learn new skills?", "answer": "Self-learning (YouTube, blogs, articles)"},
+        "Q9_time_commitment": {"question": "How much time can you dedicate to learning weekly?", "answer": "7-10 hours"},
+        "Q10_goal": {"question": "What is your main goal right now?", "answer": "Get certified / build portfolio"}
+      }
+    }
+  },
+  "selected_role_json": {"role_id": "R06", "role_name": "Data Analyst", "score": 0.512, "explanation": "..."},
+  "course_recommendations_json": [
+    {"name": "Google Data Analytics", "platform": "Coursera", "duration_weeks": 8, "skill_focus": ["SQL", "Data Cleaning", "Spreadsheets"], "difficulty": "Beginner"}
+  ]
+}
+
+resp = requests.post(url, json=payload)
+print(resp.status_code)
+print(json.dumps(resp.json(), indent=2))
