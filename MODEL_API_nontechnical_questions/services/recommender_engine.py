@@ -1,12 +1,13 @@
 import numpy as np
 import json
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Union
+from pathlib import Path
 from services.rec_explanation import generate_tech_rec_explanation
 
 # -------------------------
 # Loader (used by app.py)
 # -------------------------
-def load_json_data(filepath: str) -> Dict[str, Any]:
+def load_json_data(filepath: Union[str, Path]) -> Dict[str, Any]:
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
 

@@ -1,8 +1,20 @@
+import sys
+from pathlib import Path
+
+# Get the path of the current file being executed
+FILE = Path(__file__).resolve()
+# Determine the project root directory
+ROOT = FILE.parent.parent.parent
+# Add the project root to Python's search path
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+
+from utils.path_helpers import get_absolute_path
 import numpy as np
 import pickle
 import json
 import os
-
 
 # ============================================================
 # 1. Extract dynamic_text from a JSON payload
@@ -54,8 +66,10 @@ print("\n" + "="*80)
 print(" STEP 2 — LOAD VECTORIZER & ROLE TF-IDF ")
 print("="*80)
 
-VECT = pickle.load(open("pickle_file/tfidf_upd.pkl", "rb"))
-role_ids, ROLE_TFIDF = pickle.load(open("pickle_file/role_tfidf_matrix_upd.pkl", "rb"))
+vectorizer_path = get_absolute_path("MODEL_API_nontechnical_questions", "pickle_file", "tfidf_upd.pkl")
+matrix_path = get_absolute_path("MODEL_API_nontechnical_questions", "pickle_file", "role_tfidf_matrix_upd.pkl")
+VECT = pickle.load(open(vectorizer_path, "rb"))
+role_ids, ROLE_TFIDF = pickle.load(open(matrix_path, "rb"))
 
 print("[✓] Loaded tfidf_upd.pkl")
 print("[✓] Loaded role_tfidf_matrix_upd.pkl")
@@ -69,7 +83,8 @@ print(f"- TF-IDF matrix    : {ROLE_TFIDF.shape[0]} rows x {ROLE_TFIDF.shape[1]} 
 # 3. Vectorize the User Text
 # ============================================================
 
-user_text = extract_dynamic_text("FINAL_PAYLOAD/NEW_SAMPLE_4_final_payload.json") # change path accordingly
+final_payload_path = get_absolute_path("MODEL_API_nontechnical_questions", "FINAL_PAYLOAD", "NEW_SAMPLE_4_final_payload.json")
+user_text = extract_dynamic_text(final_payload_path) # change path accordingly
 
 if user_text is None:
     print("STOP: Could not read dynamic_text.")
