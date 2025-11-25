@@ -1,3 +1,16 @@
+import sys
+from pathlib import Path
+
+# Get the path of the current file being executed
+FILE = Path(__file__).resolve()
+# Determine the project root directory
+ROOT = FILE.parent.parent.parent
+# Add the project root to Python's search path
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+
+from utils.path_helpers import get_absolute_path
 import json
 
 def sanity_check_roles(final_payload_path: str, roles_json_path: str):
@@ -36,6 +49,6 @@ def sanity_check_roles(final_payload_path: str, roles_json_path: str):
 # Quick local manual test
 if __name__ == "__main__":
     sanity_check_roles(
-        final_payload_path="FINAL_PAYLOAD/NEW_SAMPLE_2_final_payload.json", # just change the path accordingly
-        roles_json_path="static_data/roles_upd.json"
+        final_payload_path=get_absolute_path("MODEL_API_nontechnical_questions", "FINAL_PAYLOAD", "NEW_SAMPLE_2_final_payload.json"), # just change the path accordingly
+        roles_json_path=get_absolute_path("MODEL_API_nontechnical_questions", "static_data", "roles_upd.json")
     )

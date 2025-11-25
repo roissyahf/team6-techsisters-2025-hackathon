@@ -1,0 +1,1172 @@
+[
+    {
+        "TechRoleName": "Frontend Engineer",
+        "TechRoleCode": "R01",
+        "SkillsCategory": "A",
+        "RoleDescription": "A Frontend Engineer focuses on building the visual and interactive elements of websites and applications that users interact with. They work to translate design mockups into code, ensuring responsiveness, performance, and a seamless user experience.",
+        "DayToDayResponsibilities": [
+            "Develop and maintain user-facing features using HTML, CSS, and JavaScript",
+            "Implement responsive design to ensure compatibility across devices",
+            "Collaborate with UX/UI designers and backend developers",
+            "Optimize application performance for speed and scalability",
+            "Debug and fix issues in the frontend code"
+        ],
+        "RequiredSkills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Responsive Design",
+            "Version Control (Git)",
+            "Cross-Browser Compatibility",
+            "Debugging and Testing",
+            "Basic UX/UI Principles"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $65,000 - $85,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $85,000 - $120,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $120,000 - $160,000",
+            "CareerPaths": [
+                "Senior Frontend Engineer",
+                "Full-Stack Engineer",
+                "Frontend Architect",
+                "UI/UX Designer",
+                "Engineering Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Expect constant changes in frameworks and tools, requiring ongoing learning. Interactions with design and backend teams can be challenging due to differing priorities.",
+            "WhatSuccessLooksLike": "Consistently delivering bug-free, performant, and user-friendly frontend features that align with design specifications and improve user engagement."
+        }
+    },
+    {
+        "TechRoleName": "Backend Engineer",
+        "TechRoleCode": "R02",
+        "SkillsCategory": "A",
+        "RoleDescription": "Backend Engineers build and maintain the server-side logic, databases, and APIs powering applications. They focus on performance, scalability, and security to support frontend functionalities and user requirements.",
+        "DayToDayResponsibilities": [
+            "Write, test, and maintain backend server code",
+            "Design and implement APIs for frontend consumption",
+            "Manage database systems and optimize queries",
+            "Ensure security and data protection practices",
+            "Troubleshoot and debug server-side issues"
+        ],
+        "RequiredSkills": [
+            "Programming Languages (e.g., Java, Python, Node.js)",
+            "Database Management (SQL/NoSQL)",
+            "API Design and Development (REST/GraphQL)",
+            "Server and Cloud Infrastructure Basics",
+            "Authentication & Security",
+            "Version Control (Git)",
+            "Automated Testing",
+            "Debugging and Profiling"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $70,000 - $90,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $90,000 - $130,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $130,000 - $180,000",
+            "CareerPaths": [
+                "Senior Backend Engineer",
+                "Full-Stack Engineer",
+                "Systems Architect",
+                "DevOps Engineer",
+                "Engineering Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Backend work often involves complex problem-solving with less visible output, which can be less rewarding. Security and performance issues may create high-pressure scenarios.",
+            "WhatSuccessLooksLike": "Reliable, secure, and scalable backend services that handle high loads efficiently and securely supporting business requirements."
+        }
+    },
+    {
+        "TechRoleName": "Full-Stack Engineer",
+        "TechRoleCode": "R03",
+        "SkillsCategory": "A",
+        "RoleDescription": "Full-Stack Engineers develop and maintain both frontend and backend aspects of web applications, ensuring seamless integration and performance across the entire stack.",
+        "DayToDayResponsibilities": [
+            "Design and develop web applications from frontend to backend",
+            "Integrate user-facing elements with server-side logic",
+            "Optimize application for performance and scalability",
+            "Troubleshoot issues across the entire stack",
+            "Collaborate with designers, product managers, and engineers"
+        ],
+        "RequiredSkills": [
+            "HTML, CSS, JavaScript",
+            "Backend Programming (e.g., Node.js, Python, Java)",
+            "Database Management",
+            "API Design and Integration",
+            "Version Control (Git)",
+            "Basic DevOps Knowledge",
+            "Testing and Debugging",
+            "Responsive Design Principles"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $70,000 - $95,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $95,000 - $135,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $135,000 - $190,000",
+            "CareerPaths": [
+                "Senior Full-Stack Engineer",
+                "Technical Lead",
+                "Solution Architect",
+                "Product Manager",
+                "Engineering Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Being a full-stack engineer requires staying updated with a wide range of technologies, which can be overwhelming. Balancing depth in frontend and backend can dilute expertise.",
+            "WhatSuccessLooksLike": "Efficiently delivering integrated, well-functioning applications with clean code, minimal bugs, and positive user feedback."
+        }
+    },
+    {
+        "TechRoleName": "Software Engineer",
+        "TechRoleCode": "R04",
+        "SkillsCategory": "A",
+        "RoleDescription": "Software Engineers apply engineering principles to design, build, test, and maintain software systems across various platforms and industries.",
+        "DayToDayResponsibilities": [
+            "Write, test and maintain codebases",
+            "Collaborate on system design and architecture",
+            "Debug and resolve software defects",
+            "Participate in code reviews",
+            "Work with cross-functional teams on requirements"
+        ],
+        "RequiredSkills": [
+            "Programming Languages (e.g., Java, C++, Python)",
+            "Data Structures and Algorithms",
+            "Version Control (Git)",
+            "Testing and Debugging",
+            "Agile/Scrum Methodologies",
+            "Problem Solving",
+            "System Design Basics",
+            "Software Development Lifecycle"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $70,000 - $90,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $90,000 - $130,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $130,000 - $180,000",
+            "CareerPaths": [
+                "Senior Software Engineer",
+                "Software Architect",
+                "Engineering Manager",
+                "Technical Lead",
+                "Product Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Software engineering requires constant learning and adapting to new technologies. Debugging complex legacy systems can be tedious and frustrating.",
+            "WhatSuccessLooksLike": "Delivering reliable, maintainable, and efficient software solutions that meet defined requirements and pass quality standards."
+        }
+    },
+    {
+        "TechRoleName": "Quality Assurance Engineer",
+        "TechRoleCode": "R05",
+        "SkillsCategory": "A",
+        "RoleDescription": "Quality Assurance Engineers ensure that software products meet declared standards and function correctly by designing tests, identifying bugs, and improving testing processes.",
+        "DayToDayResponsibilities": [
+            "Develop and execute test plans and test cases",
+            "Perform manual and automated testing",
+            "Collaborate with development teams to resolve defects",
+            "Analyze quality metrics and report findings",
+            "Continuously improve testing processes and standards"
+        ],
+        "RequiredSkills": [
+            "Manual Testing",
+            "Automation Tools (e.g., Selenium, JUnit)",
+            "Test Case Design",
+            "Bug Tracking Tools",
+            "SQL",
+            "Agile Testing",
+            "Basic Programming",
+            "Attention to Detail"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $60,000 - $75,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $75,000 - $100,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $100,000 - $130,000",
+            "CareerPaths": [
+                "Senior QA Engineer",
+                "QA Automation Engineer",
+                "Test Manager",
+                "Software Development Engineer in Test",
+                "QA Lead"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "QA work can feel repetitive and underappreciated, though it is critical. Over-emphasis on automated testing tools sometimes overlooks the need for exploratory testing and critical thinking.",
+            "WhatSuccessLooksLike": "Consistently identifying defects early, maintaining high test coverage and contributing to product quality improvement."
+        }
+    },
+    {
+        "TechRoleName": "Data Analyst",
+        "TechRoleCode": "R06",
+        "SkillsCategory": "B",
+        "RoleDescription": "Data Analysts collect, process, and analyze data to help organizations make informed business decisions by identifying trends and patterns.",
+        "DayToDayResponsibilities": [
+            "Gather and clean data from multiple sources",
+            "Perform statistical analysis and data modeling",
+            "Create visualizations and reports for stakeholders",
+            "Identify trends and actionable insights",
+            "Collaborate with business teams to define data needs"
+        ],
+        "RequiredSkills": [
+            "SQL",
+            "Excel",
+            "Data Visualization Tools (e.g., Tableau, Power BI)",
+            "Statistics",
+            "Data Cleaning",
+            "Python or R Basics",
+            "Critical Thinking",
+            "Business Acumen"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $55,000 - $75,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $75,000 - $100,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $100,000 - $130,000",
+            "CareerPaths": [
+                "Senior Data Analyst",
+                "Data Scientist",
+                "Business Intelligence Analyst",
+                "Data Engineer",
+                "Analytics Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Data analysis often involves cleaning large messy datasets, which can be tedious. Interpretation errors can lead to misguided decisions if not careful.",
+            "WhatSuccessLooksLike": "Delivering accurate, clear, and actionable insights that drive strategic business improvements."
+        }
+    },
+    {
+        "TechRoleName": "Data Scientist",
+        "TechRoleCode": "R07",
+        "SkillsCategory": "B",
+        "RoleDescription": "Data Scientists use advanced analytical techniques, including machine learning, to extract meaningful insights and build predictive models from complex data.",
+        "DayToDayResponsibilities": [
+            "Collect and preprocess large datasets",
+            "Develop and test machine learning models",
+            "Perform statistical analysis and hypothesis testing",
+            "Visualize data and communicate findings",
+            "Collaborate with business and technical teams"
+        ],
+        "RequiredSkills": [
+            "Python or R",
+            "Machine Learning Frameworks (e.g., TensorFlow, Scikit-learn)",
+            "Statistics and Probability",
+            "Data Visualization",
+            "Big Data Tools",
+            "Data Wrangling",
+            "SQL",
+            "Communication Skills"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $85,000 - $110,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $110,000 - $150,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $150,000 - $200,000",
+            "CareerPaths": [
+                "Senior Data Scientist",
+                "Machine Learning Engineer",
+                "Data Science Manager",
+                "Research Scientist",
+                "AI Specialist"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Success demands deep math, programming, and domain expertise; theoretical knowledge alone is insufficient. Results can be unpredictable and sometimes inconclusive.",
+            "WhatSuccessLooksLike": "Building models that reliably predict or classify outcomes, delivering measurable business impact through data-driven solutions."
+        }
+    },
+    {
+        "TechRoleName": "Machine Learning Engineer",
+        "TechRoleCode": "R08",
+        "SkillsCategory": "B",
+        "RoleDescription": "Machine Learning Engineers design, build, and deploy machine learning models and systems that enable automated predictions and decision-making.",
+        "DayToDayResponsibilities": [
+            "Develop and maintain ML training pipelines",
+            "Evaluate and tune model performance",
+            "Collaborate with data scientists to productionize models",
+            "Build APIs for model inference",
+            "Monitor deployed models and retrain as needed"
+        ],
+        "RequiredSkills": [
+            "Python",
+            "TensorFlow/PyTorch",
+            "Model Evaluation and Tuning",
+            "Data Preprocessing",
+            "API Development",
+            "Cloud Platforms (AWS, GCP, Azure)",
+            "Statistics",
+            "Software Engineering Principles"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $90,000 - $120,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $120,000 - $160,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $160,000 - $220,000",
+            "CareerPaths": [
+                "Senior Machine Learning Engineer",
+                "AI Engineer",
+                "Data Scientist",
+                "ML Architect",
+                "Research Scientist"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "The role demands continuous learning as the field evolves rapidly. Deploying models that perform well in production is challenging and often requires engineering rigor beyond research.",
+            "WhatSuccessLooksLike": "Delivering scalable, maintainable ML solutions that improve automation and predictive capabilities with measurable business value."
+        }
+    },
+    {
+        "TechRoleName": "Business Intelligence Analyst",
+        "TechRoleCode": "R09",
+        "SkillsCategory": "B",
+        "RoleDescription": "Business Intelligence Analysts transform organizational data into insights through reporting and dashboard development, supporting data-driven decisions.",
+        "DayToDayResponsibilities": [
+            "Develop and maintain BI dashboards and reports",
+            "Analyze data to identify business trends",
+            "Work with stakeholders to define KPIs",
+            "Ensure the accuracy and quality of data",
+            "Perform ad-hoc data analysis"
+        ],
+        "RequiredSkills": [
+            "SQL",
+            "Data Visualization (Power BI, Tableau)",
+            "Data Warehousing Concepts",
+            "ETL Processes",
+            "Business Acumen",
+            "Critical Thinking",
+            "Report Writing",
+            "Analytical Skills"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $60,000 - $80,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $80,000 - $115,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $115,000 - $150,000",
+            "CareerPaths": [
+                "Senior BI Analyst",
+                "Data Analyst",
+                "Data Engineer",
+                "BI Manager",
+                "Data Scientist"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "BI work can be hindered by poor data quality and siloed systems. Insightful reporting needs strong communication to influence decision makers.",
+            "WhatSuccessLooksLike": "Producing timely, accurate reports and dashboards that enable stakeholders to make informed business decisions."
+        }
+    },
+    {
+        "TechRoleName": "Data Engineer",
+        "TechRoleCode": "R10",
+        "SkillsCategory": "B",
+        "RoleDescription": "Data Engineers design, build, and manage data pipelines and architecture to ensure efficient, secure, and reliable data flow for analytics and operational use.",
+        "DayToDayResponsibilities": [
+            "Develop, maintain, and optimize data pipelines",
+            "Manage and configure data storage systems",
+            "Ensure data quality and security",
+            "Collaborate with data scientists and analysts",
+            "Monitor system performance and troubleshoot issues"
+        ],
+        "RequiredSkills": [
+            "SQL",
+            "ETL Tools",
+            "Big Data Technologies (Hadoop, Spark)",
+            "Cloud Platforms (AWS, Azure, GCP)",
+            "Data Modeling",
+            "Python/Scala",
+            "Data Warehousing",
+            "Linux/Unix"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $75,000 - $95,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $95,000 - $130,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $130,000 - $180,000",
+            "CareerPaths": [
+                "Senior Data Engineer",
+                "Data Architect",
+                "Big Data Engineer",
+                "Machine Learning Engineer",
+                "Analytics Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Data engineering often involves managing legacy systems and data inconsistencies which can be frustrating. High reliability is expected but difficult to achieve.",
+            "WhatSuccessLooksLike": "Delivering robust, scalable data infrastructure that supports accurate and timely data access for business needs."
+        }
+    },
+    {
+        "TechRoleName": "UX Designer",
+        "TechRoleCode": "R11",
+        "SkillsCategory": "C",
+        "RoleDescription": "UX Designers focus on enhancing user satisfaction by improving the usability, accessibility, and interaction between the user and the product. They conduct research and design user flows to create intuitive and engaging experiences.",
+        "DayToDayResponsibilities": [
+            "Conduct user research and usability testing",
+            "Create wireframes, prototypes, and user journey maps",
+            "Collaborate with product managers and developers",
+            "Analyze user feedback and iterate on designs",
+            "Present design solutions to stakeholders"
+        ],
+        "RequiredSkills": [
+            "User Research",
+            "Wireframing & Prototyping",
+            "Interaction Design",
+            "Usability Testing",
+            "Figma or Adobe XD",
+            "User Journey Mapping",
+            "Analytical Thinking",
+            "Collaboration"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $70,000 - $90,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $90,000 - $115,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $115,000 - $140,000",
+            "CareerPaths": [
+                "Senior UX Designer",
+                "UX Researcher",
+                "Product Designer",
+                "Design Manager",
+                "UX Director"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "UX design can be iterative and often requires handling conflicting stakeholder demands. The impact of work may not always be immediately visible.",
+            "WhatSuccessLooksLike": "Intuitive, user-friendly designs validated through research that positively impact user engagement and satisfaction."
+        }
+    },
+    {
+        "TechRoleName": "UI Designer",
+        "TechRoleCode": "R12",
+        "SkillsCategory": "C",
+        "RoleDescription": "UI Designers are responsible for designing the visual aspects of user interfaces, focusing on look, feel, and interactive elements to create a cohesive and aesthetically pleasing experience.",
+        "DayToDayResponsibilities": [
+            "Design interface layouts and user interaction elements",
+            "Create style guides and design systems",
+            "Collaborate with UX designers and developers",
+            "Prepare graphics and assets for implementation",
+            "Ensure visual consistency across platforms"
+        ],
+        "RequiredSkills": [
+            "Graphic Design",
+            "Adobe Creative Suite",
+            "Typography",
+            "Color Theory",
+            "Design Systems",
+            "Prototyping Tools (e.g., Figma, Sketch)",
+            "Attention to Detail",
+            "Collaboration"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $65,000 - $85,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $85,000 - $110,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $110,000 - $135,000",
+            "CareerPaths": [
+                "Senior UI Designer",
+                "Visual Designer",
+                "Product Designer",
+                "Creative Director",
+                "UX/UI Lead"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "UI design requires balancing creativity with strict brand and technical constraints. Work can become repetitive and highly detailed.",
+            "WhatSuccessLooksLike": "Visually coherent and appealing interfaces that enhance user experience and adhere to branding guidelines."
+        }
+    },
+    {
+        "TechRoleName": "Product Designer",
+        "TechRoleCode": "R13",
+        "SkillsCategory": "C",
+        "RoleDescription": "Product Designers handle the end-to-end design of digital products, integrating UX and UI principles to deliver functional, attractive, and user-centered solutions.",
+        "DayToDayResponsibilities": [
+            "Research user needs and business requirements",
+            "Design wireframes, interactive prototypes, and high-fidelity visuals",
+            "Collaborate with cross-functional teams including engineering and marketing",
+            "Iterate designs based on user feedback and analytics",
+            "Define and maintain design systems"
+        ],
+        "RequiredSkills": [
+            "User Research",
+            "UI & UX Design",
+            "Prototyping Tools",
+            "Design Systems",
+            "User Testing",
+            "Communication",
+            "Problem Solving",
+            "Agile Methodology"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $75,000 - $95,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $95,000 - $125,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $125,000 - $160,000",
+            "CareerPaths": [
+                "Senior Product Designer",
+                "UX Lead",
+                "Product Manager",
+                "Design Director",
+                "Head of Design"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Product design responsibilities are broad and require juggling multiple skills and stakeholder requests, leading to potential scope stress.",
+            "WhatSuccessLooksLike": "Delivery of user-centered, aesthetically pleasing, and functional products that meet business goals."
+        }
+    },
+    {
+        "TechRoleName": "Interaction Designer",
+        "TechRoleCode": "R14",
+        "SkillsCategory": "C",
+        "RoleDescription": "Interaction Designers focus on crafting engaging interfaces and ensuring seamless interactions between users and products, concentrating on human-computer interaction principles.",
+        "DayToDayResponsibilities": [
+            "Develop interactive elements and user flows",
+            "Create prototypes and interaction models",
+            "Conduct usability testing to refine experiences",
+            "Collaborate with UX, UI, and product teams",
+            "Analyze user behaviors and suggest enhancements"
+        ],
+        "RequiredSkills": [
+            "Interaction Design",
+            "Prototyping Tools",
+            "User Research",
+            "Usability Testing",
+            "Information Architecture",
+            "Human-Computer Interaction Principles",
+            "Wireframing",
+            "Collaboration"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $65,000 - $85,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $85,000 - $110,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $110,000 - $135,000",
+            "CareerPaths": [
+                "Senior Interaction Designer",
+                "UX Designer",
+                "Product Designer",
+                "Design Manager",
+                "Human Factors Specialist"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Interaction design can sometimes be overshadowed by visual or technical priorities; strong advocacy is needed.",
+            "WhatSuccessLooksLike": "Designs that facilitate intuitive and efficient interactions improving overall user satisfaction."
+        }
+    },
+    {
+        "TechRoleName": "Frontend Developer",
+        "TechRoleCode": "R15",
+        "SkillsCategory": "A",
+        "RoleDescription": "Frontend Developers implement the visual and interactive parts of web applications, translating design specs into functional code.",
+        "DayToDayResponsibilities": [
+            "Code website and application frontends using HTML, CSS, JavaScript",
+            "Optimize performance and responsiveness",
+            "Collaborate with designers and backend developers",
+            "Fix bugs and improve UI features",
+            "Keep up with frontend technology trends"
+        ],
+        "RequiredSkills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Responsive Design",
+            "Version Control (Git)",
+            "Testing/Debugging",
+            "Cross-Browser Compatibility",
+            "Frameworks (React, Vue, Angular basics)"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $65,000 - $85,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $85,000 - $115,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $115,000 - $150,000",
+            "CareerPaths": [
+                "Senior Frontend Developer",
+                "Full-Stack Developer",
+                "Frontend Architect",
+                "UI/UX Designer",
+                "Engineering Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Must frequently learn new libraries and frameworks; can face tight deadlines and design compromises.",
+            "WhatSuccessLooksLike": "Consistently delivering clean, efficient frontend code that aligns with UX/UI designs and performs well."
+        }
+    },
+    {
+        "TechRoleName": "Cybersecurity Engineer",
+        "TechRoleCode": "R16",
+        "SkillsCategory": "D",
+        "RoleDescription": "Cybersecurity Engineers protect systems, networks, and data from cyber threats by implementing security measures and monitoring for breaches.",
+        "DayToDayResponsibilities": [
+            "Conduct security assessments and penetration tests",
+            "Implement and manage firewalls and encryption",
+            "Monitor network traffic for suspicious activity",
+            "Respond to security incidents and breaches",
+            "Keep up with security threats and best practices"
+        ],
+        "RequiredSkills": [
+            "Network Security",
+            "Penetration Testing",
+            "Firewalls & Encryption",
+            "Security Information and Event Management (SIEM)",
+            "Incident Response",
+            "Operating Systems (Linux/Windows Security)",
+            "Cybersecurity Frameworks (NIST, ISO 27001)",
+            "Scripting (Python, Bash)"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $75,000 - $95,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $95,000 - $130,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $130,000 - $180,000",
+            "CareerPaths": [
+                "Senior Cybersecurity Engineer",
+                "Security Architect",
+                "Security Analyst",
+                "Chief Information Security Officer (CISO)",
+                "Penetration Tester"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Constant vigilance required; work can be stressful due to threat exposure and incident response urgency.",
+            "WhatSuccessLooksLike": "Maintaining secure systems with minimal breaches and timely mitigation of vulnerabilities."
+        }
+    },
+    {
+        "TechRoleName": "Cloud Architect",
+        "TechRoleCode": "R17",
+        "SkillsCategory": "D",
+        "RoleDescription": "Cloud Architects design and oversee an organization's cloud computing strategy including deployment, management, and security of cloud resources.",
+        "DayToDayResponsibilities": [
+            "Design cloud infrastructure and architecture",
+            "Manage cloud migration and integration",
+            "Implement cloud security measures",
+            "Optimize cloud resources for cost and performance",
+            "Collaborate with IT and development teams"
+        ],
+        "RequiredSkills": [
+            "Cloud Platforms (AWS, Azure, Google Cloud)",
+            "Cloud Architecture Design",
+            "Infrastructure as Code (IaC)",
+            "Networking and Security",
+            "Containers and Orchestration (Docker, Kubernetes)",
+            "DevOps Tools",
+            "Cost Management",
+            "Automation Scripting"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $90,000 - $110,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $110,000 - $140,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $140,000 - $190,000",
+            "CareerPaths": [
+                "Senior Cloud Architect",
+                "Cloud Engineer",
+                "DevOps Engineer",
+                "Solutions Architect",
+                "Cloud Security Specialist"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Requires continuous learning of evolving cloud technologies; managing cost and security risks can be complex.",
+            "WhatSuccessLooksLike": "Reliable, scalable cloud architecture that meets business needs while optimizing cost and security."
+        }
+    },
+    {
+        "TechRoleName": "DevOps Engineer",
+        "TechRoleCode": "R18",
+        "SkillsCategory": "D",
+        "RoleDescription": "DevOps Engineers bridge development and operations teams by automating infrastructure, managing deployments, and ensuring system reliability.",
+        "DayToDayResponsibilities": [
+            "Automate deployment pipelines and infrastructure",
+            "Monitor system performance and availability",
+            "Manage CI/CD processes",
+            "Collaborate across development and IT teams",
+            "Troubleshoot and resolve production issues"
+        ],
+        "RequiredSkills": [
+            "CI/CD Tools (Jenkins, GitLab CI)",
+            "Infrastructure as Code (Terraform, Ansible)",
+            "Containerization (Docker, Kubernetes)",
+            "Cloud Platforms",
+            "Scripting (Python, Bash)",
+            "Monitoring Tools",
+            "Linux System Administration",
+            "Version Control (Git)"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $70,000 - $90,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $90,000 - $130,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $130,000 - $170,000",
+            "CareerPaths": [
+                "Senior DevOps Engineer",
+                "Site Reliability Engineer",
+                "Cloud Engineer",
+                "DevOps Manager",
+                "Infrastructure Architect"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Needs strong multitasking under pressure; often responsible for systems under production stress.",
+            "WhatSuccessLooksLike": "Seamless, automated deployment processes and highly available system infrastructure."
+        }
+    },
+    {
+        "TechRoleName": "Site Reliability Engineer",
+        "TechRoleCode": "R19",
+        "SkillsCategory": "D",
+        "RoleDescription": "Site Reliability Engineers ensure the reliability, scalability, and performance of production systems through engineering and automation.",
+        "DayToDayResponsibilities": [
+            "Monitor system health and availability",
+            "Automate operational tasks and incident response",
+            "Manage scaling and capacity planning",
+            "Collaborate with development teams for reliability",
+            "Conduct post-incident reviews and improvements"
+        ],
+        "RequiredSkills": [
+            "Monitoring and Alerting Systems",
+            "Automation Tools",
+            "Cloud Infrastructure",
+            "Linux/Unix Administration",
+            "Scripting and Programming",
+            "Incident Management",
+            "Load Balancing and Scaling",
+            "Networking"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $80,000 - $100,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $100,000 - $140,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $140,000 - $190,000",
+            "CareerPaths": [
+                "Senior SRE",
+                "DevOps Engineer",
+                "Infrastructure Engineer",
+                "Site Reliability Manager",
+                "Cloud Architect"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Constant on-call duties can be stressful with unpredictable work hours. Balancing reliability and rapid feature delivery is challenging.",
+            "WhatSuccessLooksLike": "Stable, performant production environments with minimal downtime and rapid incident resolution."
+        }
+    },
+    {
+        "TechRoleName": "Network Engineer",
+        "TechRoleCode": "R20",
+        "SkillsCategory": "D",
+        "RoleDescription": "Network Engineers design, implement, and maintain network infrastructure for secure and efficient data communication.",
+        "DayToDayResponsibilities": [
+            "Configure and maintain routers, switches, and firewalls",
+            "Monitor network performance and troubleshoot issues",
+            "Ensure network security and compliance",
+            "Plan and implement network upgrades",
+            "Collaborate with IT and security teams"
+        ],
+        "RequiredSkills": [
+            "Network Protocols (TCP/IP, OSPF, BGP)",
+            "Routing and Switching",
+            "Firewall and VPN Management",
+            "Network Monitoring Tools",
+            "Troubleshooting and Diagnostics",
+            "Network Security Basics",
+            "Scripting (Python, Bash)",
+            "Wireless Technologies"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $60,000 - $80,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $80,000 - $110,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $110,000 - $140,000",
+            "CareerPaths": [
+                "Senior Network Engineer",
+                "Network Architect",
+                "Security Engineer",
+                "Infrastructure Manager",
+                "IT Manager"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Network issues can impact entire organizations causing high pressure; must handle routine yet complex troubleshooting.",
+            "WhatSuccessLooksLike": "Reliable, secure, and optimized network infrastructure with minimal downtime and quick resolution of issues."
+        }
+    },
+    {
+        "TechRoleName": "Product Manager",
+        "TechRoleCode": "R21",
+        "SkillsCategory": "E",
+        "RoleDescription": "Product Managers lead the development and lifecycle of products, balancing business goals, user needs, and technical feasibility to deliver valuable solutions.",
+        "DayToDayResponsibilities": [
+            "Define product vision and strategy",
+            "Gather and prioritize product requirements",
+            "Coordinate cross-functional teams",
+            "Analyze market and user data",
+            "Manage product roadmap and releases"
+        ],
+        "RequiredSkills": [
+            "Product Roadmapping",
+            "Agile/Scrum",
+            "Stakeholder Management",
+            "Market Research",
+            "Data Analysis",
+            "Communication",
+            "Decision Making",
+            "User-Centered Design"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $75,000 - $95,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $95,000 - $130,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $130,000 - $180,000",
+            "CareerPaths": [
+                "Senior Product Manager",
+                "Group Product Manager",
+                "Product Director",
+                "VP of Product",
+                "Chief Product Officer (CPO)"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Product Managers often juggle conflicting priorities and have limited direct authority, requiring strong persuasion and negotiation skills.",
+            "WhatSuccessLooksLike": "Products that meet business goals with user satisfaction and timely market delivery."
+        }
+    },
+    {
+        "TechRoleName": "Project Manager",
+        "TechRoleCode": "R22",
+        "SkillsCategory": "E",
+        "RoleDescription": "Project Managers oversee project planning, execution, and delivery by coordinating teams, managing resources, timelines, and risks to meet project objectives.",
+        "DayToDayResponsibilities": [
+            "Develop project plans and schedules",
+            "Manage project budgets and resources",
+            "Coordinate team activities",
+            "Identify and mitigate risks",
+            "Report progress to stakeholders"
+        ],
+        "RequiredSkills": [
+            "Project Planning",
+            "Risk Management",
+            "Agile/Waterfall Methodologies",
+            "Communication",
+            "Time Management",
+            "Budgeting",
+            "Problem Solving",
+            "Stakeholder Management"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $65,000 - $85,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $85,000 - $115,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $115,000 - $150,000",
+            "CareerPaths": [
+                "Senior Project Manager",
+                "Program Manager",
+                "PMO Lead",
+                "Portfolio Manager",
+                "Director of Project Management"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Project Managers often manage tensions between scope, time, and budget, with pressure to deliver on all fronts concurrently.",
+            "WhatSuccessLooksLike": "Projects delivered on time, within budget, and meeting defined scope and quality standards."
+        }
+    },
+    {
+        "TechRoleName": "Program Manager",
+        "TechRoleCode": "R23",
+        "SkillsCategory": "E",
+        "RoleDescription": "Program Managers oversee multiple related projects to achieve strategic business outcomes, ensuring alignment, resource optimization, and stakeholder communication.",
+        "DayToDayResponsibilities": [
+            "Coordinate multiple project teams",
+            "Align program goals with business objectives",
+            "Manage program risks and issues",
+            "Communicate with senior management and stakeholders",
+            "Monitor and optimize overall program performance"
+        ],
+        "RequiredSkills": [
+            "Program Management",
+            "Portfolio Management",
+            "Risk and Issue Management",
+            "Communication",
+            "Stakeholder Engagement",
+            "Strategic Planning",
+            "Budget Management",
+            "Leadership"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $80,000 - $100,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $100,000 - $140,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $140,000 - $190,000",
+            "CareerPaths": [
+                "Senior Program Manager",
+                "Portfolio Manager",
+                "Director of Program Management",
+                "Vice President of Operations",
+                "Chief Operating Officer (COO)"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Program Managers face complexity managing interdependencies and navigating organizational politics across projects.",
+            "WhatSuccessLooksLike": "Successful coordination and delivery of multiple projects achieving strategic objectives with stakeholder alignment."
+        }
+    },
+    {
+        "TechRoleName": "Business Analyst",
+        "TechRoleCode": "R24",
+        "SkillsCategory": "E",
+        "RoleDescription": "Business Analysts bridge business needs and technology solutions by analyzing processes, gathering requirements, and facilitating clear communication.",
+        "DayToDayResponsibilities": [
+            "Gather and document business requirements",
+            "Analyze and improve business processes",
+            "Facilitate communication between stakeholders and IT",
+            "Support solution design and testing",
+            "Conduct impact analysis and reporting"
+        ],
+        "RequiredSkills": [
+            "Requirements Gathering",
+            "Process Modeling",
+            "Stakeholder Communication",
+            "SQL Basics",
+            "Problem Solving",
+            "Documentation",
+            "Agile/Scrum",
+            "Critical Thinking"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $60,000 - $80,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $80,000 - $110,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $110,000 - $140,000",
+            "CareerPaths": [
+                "Senior Business Analyst",
+                "Product Owner",
+                "Business Architect",
+                "Project Manager",
+                "Consultant"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Often works under unclear requirements with competing stakeholder interests; must manage expectations realistically.",
+            "WhatSuccessLooksLike": "Clear, actionable requirements and improved business processes that enable successful project delivery."
+        }
+    },
+    {
+        "TechRoleName": "IT Consultant",
+        "TechRoleCode": "R25",
+        "SkillsCategory": "E",
+        "RoleDescription": "IT Consultants provide expert advice on technology solutions to improve business processes, focusing on strategic alignment and implementation support.",
+        "DayToDayResponsibilities": [
+            "Assess client IT needs and systems",
+            "Recommend technology improvements",
+            "Plan and support implementation projects",
+            "Train and support client staff",
+            "Manage client relationships"
+        ],
+        "RequiredSkills": [
+            "Business Analysis",
+            "Solution Design",
+            "Project Management Basics",
+            "Communication",
+            "Technical Knowledge",
+            "Problem Solving",
+            "Client Management",
+            "Change Management"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $65,000 - $85,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $85,000 - $120,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $120,000 - $170,000",
+            "CareerPaths": [
+                "Senior IT Consultant",
+                "Solution Architect",
+                "IT Manager",
+                "Technology Director",
+                "Chief Information Officer (CIO)"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Consulting requires adaptability and resilience; projects can be high-pressure with ambiguous outcomes.",
+            "WhatSuccessLooksLike": "Delivering tangible technology solutions that improve client business processes and effectiveness."
+        }
+    },
+    {
+        "TechRoleName": "Technical Writer",
+        "TechRoleCode": "R26",
+        "SkillsCategory": "F",
+        "RoleDescription": "Technical Writers create clear and concise documentation that helps users understand complex products, processes, or systems.",
+        "DayToDayResponsibilities": [
+            "Write and edit user manuals, guides, and instructions",
+            "Collaborate with engineers and subject matter experts",
+            "Maintain documentation standards and templates",
+            "Update documentation as products evolve",
+            "Ensure content clarity and usability"
+        ],
+        "RequiredSkills": [
+            "Technical Writing",
+            "Editing and Proofreading",
+            "Information Design",
+            "Tools (MS Word, MadCap, Markdown)",
+            "Research Skills",
+            "Communication",
+            "Content Management Systems",
+            "Audience Analysis"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $50,000 - $65,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $65,000 - $85,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $85,000 - $110,000",
+            "CareerPaths": [
+                "Senior Technical Writer",
+                "Documentation Manager",
+                "Content Strategist",
+                "UX Writer",
+                "Information Architect"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Requires balancing technical accuracy with reader comprehension; often under tight deadlines.",
+            "WhatSuccessLooksLike": "Clear, accurate, and accessible documentation that reduces user confusion and support requests."
+        }
+    },
+    {
+        "TechRoleName": "Content Strategist",
+        "TechRoleCode": "R27",
+        "SkillsCategory": "F",
+        "RoleDescription": "Content Strategists plan, develop, and manage content to meet business goals and user needs, ensuring consistency and effectiveness across channels.",
+        "DayToDayResponsibilities": [
+            "Develop content strategies aligned with business objectives",
+            "Analyze audience and content performance",
+            "Collaborate with marketing, design, and product teams",
+            "Plan content production and distribution",
+            "Maintain brand voice and messaging guidelines"
+        ],
+        "RequiredSkills": [
+            "Content Planning",
+            "SEO Basics",
+            "Analytics Tools",
+            "Content Management Systems",
+            "Writing and Editing",
+            "Communication",
+            "Project Management",
+            "Audience Research"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $55,000 - $70,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $70,000 - $90,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $90,000 - $120,000",
+            "CareerPaths": [
+                "Senior Content Strategist",
+                "Content Marketing Manager",
+                "Digital Marketing Manager",
+                "Creative Director",
+                "Chief Content Officer"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Requires juggling multiple projects and stakeholders; success is often indirect and over long-term.",
+            "WhatSuccessLooksLike": "Content that drives engagement, supports business goals, and maintains brand consistency."
+        }
+    },
+    {
+        "TechRoleName": "SEO Specialist",
+        "TechRoleCode": "R28",
+        "SkillsCategory": "F",
+        "RoleDescription": "SEO Specialists optimize websites to improve search engine rankings, increase organic traffic, and enhance online visibility.",
+        "DayToDayResponsibilities": [
+            "Conduct keyword research and analysis",
+            "Develop and implement SEO strategies",
+            "Monitor website performance using analytics tools",
+            "Optimize website content and metadata",
+            "Stay updated on search engine algorithm changes"
+        ],
+        "RequiredSkills": [
+            "SEO Tools (Google Analytics, SEMrush)",
+            "Keyword Research",
+            "On-page and Off-page SEO",
+            "Content Optimization",
+            "HTML/CSS Basics",
+            "Data Analysis",
+            "Communication",
+            "Digital Marketing"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $50,000 - $65,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $65,000 - $85,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $85,000 - $110,000",
+            "CareerPaths": [
+                "Senior SEO Specialist",
+                "SEO Manager",
+                "Digital Marketing Manager",
+                "Content Strategist",
+                "Marketing Director"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "SEO results take time to manifest; requires ongoing adaptation and consistent effort.",
+            "WhatSuccessLooksLike": "Improved search rankings, increased organic traffic, and measurable business growth."
+        }
+    },
+    {
+        "TechRoleName": "Digital Marketing Specialist",
+        "TechRoleCode": "R29",
+        "SkillsCategory": "F",
+        "RoleDescription": "Digital Marketing Specialists plan and execute online marketing campaigns across channels to drive brand awareness and customer acquisition.",
+        "DayToDayResponsibilities": [
+            "Create and manage PPC and social media campaigns",
+            "Analyze campaign performance and optimize results",
+            "Coordinate content marketing activities",
+            "Manage email marketing and CRM tools",
+            "Collaborate with creative and sales teams"
+        ],
+        "RequiredSkills": [
+            "PPC Advertising",
+            "Google Ads",
+            "Social Media Marketing",
+            "Email Marketing",
+            "Analytics Tools",
+            "Content Creation",
+            "CRM Systems",
+            "SEO Basics"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $50,000 - $70,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $70,000 - $95,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $95,000 - $130,000",
+            "CareerPaths": [
+                "Senior Digital Marketer",
+                "Digital Marketing Manager",
+                "Marketing Director",
+                "Content Strategist",
+                "Chief Marketing Officer (CMO)"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Marketing results depend on many external factors; campaigns require constant optimization and testing.",
+            "WhatSuccessLooksLike": "Measurable increases in online engagement, leads, and conversions against campaign goals."
+        }
+    },
+    {
+        "TechRoleName": "Copywriter",
+        "TechRoleCode": "R30",
+        "SkillsCategory": "F",
+        "RoleDescription": "Copywriters craft compelling written content for marketing, advertising, and communications to engage audiences and drive action.",
+        "DayToDayResponsibilities": [
+            "Write clear, persuasive copy for various media",
+            "Collaborate with marketing and design teams",
+            "Edit and proofread content",
+            "Ensure brand voice consistency",
+            "Research industry trends and audience preferences"
+        ],
+        "RequiredSkills": [
+            "Creative Writing",
+            "Editing",
+            "SEO Basics",
+            "Marketing Knowledge",
+            "Research",
+            "Attention to Detail",
+            "Time Management",
+            "Communication"
+        ],
+        "CareerOpportunities": {
+            "EntryLevelSalaryRangeUSA": "Entry level: $45,000 - $60,000",
+            "MidLevelSalaryRangeUSA": "Mid level: $60,000 - $80,000",
+            "SeniorLevelSalaryRangeUSA": "Senior level: $80,000 - $110,000",
+            "CareerPaths": [
+                "Senior Copywriter",
+                "Content Strategist",
+                "Marketing Manager",
+                "Creative Director",
+                "Communications Director"
+            ]
+        },
+        "CompetencyExpectations": {
+            "HarshTruth": "Copywriting can involve tight deadlines and frequent revisions; success depends on understanding both audience and brand voice deeply.",
+            "WhatSuccessLooksLike": "Engaging, clear copy that drives desired audience actions and supports marketing objectives."
+        }
+    }
+]
