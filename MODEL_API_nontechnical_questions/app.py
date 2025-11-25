@@ -1,3 +1,16 @@
+import sys
+from pathlib import Path
+
+# Get the path of the current file being executed
+FILE = Path(__file__).resolve()
+# Determine the project root directory
+ROOT = FILE.parent.parent
+# Add the project root to Python's search path
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+
+from utils.path_helpers import get_absolute_path
 from flask import Flask, request, jsonify
 from pathlib import Path
 import pickle
@@ -9,8 +22,8 @@ app = Flask(__name__)
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-STATIC_DATA_PATH = BASE_DIR / "static_data"
-PICKLE_PATH = BASE_DIR / "pickle_file"
+STATIC_DATA_PATH = get_absolute_path("MODEL_API_nontechnical_questions", "static_data")
+PICKLE_PATH = get_absolute_path("MODEL_API_nontechnical_questions", "pickle_file")
 
 # --------------------------------------------------
 # Preload static resources ONCE

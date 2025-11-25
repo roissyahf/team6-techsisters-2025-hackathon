@@ -1,14 +1,15 @@
 import json
 from typing import Dict, Any, List, Union, Tuple
+from pathlib import Path
 
 
 # -------------------------
 # 0. JSON Loader
 # -------------------------
-def load_json_data(filepath: str) -> Dict[str, Any]:
+def load_json_data(filepath: Union[str, Path]) -> Dict[str, Any]:
     print(f"Loading data from: {filepath}")
-    with open(filepath, 'r', encoding='utf-8') as file:
-        return json.load(file)
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 
 # -------------------------
