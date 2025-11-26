@@ -49,5 +49,6 @@ API:
 - GET  /api/choices
 
 Valid question types: single, multi, scale, text, boolean, number
+```
 
 ## [2] _Add more_
