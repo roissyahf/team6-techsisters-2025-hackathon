@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Technical Choices{% endblock %}
+{% block content %}
+<h2>Technical Choices</h2>
+<form method="post" action="/admin/technical_choices">
+  <label>Technical Question
+    <select name="question_id" required>
+      <option value="">-- choose --</option>
+      {% for tq in technical_questions %}
+      <option value="{{ tq.id }}">#{{ tq.id }} {{ tq.prompt[:60] }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Label <input type="text" name="label" required></label>
+  <label>Value <input type="text" name="value" required></label>
+  <label>Position <input type="number" name="position" value="0"></label>
+  <label>Meta (JSON) <textarea name="meta" rows="3"></textarea></label>
+  <button type="submit">Create</button>
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Question</th>
+      <th>Label</th>
+      <th>Value</th>
+      <th>Position</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tc in technical_choices %}
+    <tr>
+      <td>{{ tc.id }}</td>
+      <td>#{{ tc.question_id }}</td>
+      <td>{{ tc.label }}</td>
+      <td><code>{{ tc.value }}</code></td>
+      <td>{{ tc.position }}</td>
+      <td>
+        <form method="post" action="/admin/technical_choices/{{ tc.id }}/delete" style="display:inline;">
+          <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
