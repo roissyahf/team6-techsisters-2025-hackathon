@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Career Compass{% endblock %}</title>
+  <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+     <div class="loader" id="loader"></div>
+  
+ <!-- <header class="container">
+    <nav>
+      <a href="/">Home</a>
+      {% if current_user.is_authenticated %}
+        <p>Welcome, {{ current_user.email }}!</p>
+      <a href="/logout">Logout</a>  
+      {% else %}
+        <a href="{{ url_for('security.login') }}">Sign in</a>
+      {% endif %}
+      
+    </nav>
+  </header> -->
+  <main class="container">
+    {% if request.path == "/login" %}
+    <div class="page-wrapper" id="get-started">
+    <section class="hero">
+      <div class="orbit-wrapper">
+        <div class="orbit-ring ring-lg"></div>
+        <div class="orbit-ring ring-md"></div>
+        <div class="orbit-ring ring-sm"></div>
+
+        <!-- placeholder avatars (use background-image if you have real photos) -->
+        <div class="avatar a1">
+          <div class="avatar-inner"><img src="{{ url_for('static', filename='images/avatar4.jpg') }}"></div>
+        </div>
+        <div class="avatar a2">
+          <div class="avatar-inner"><img src="{{ url_for('static', filename='images/avatar3.jpg') }}"></div>
+        </div>
+        <div class="avatar a3">
+          <div class="avatar-inner"><img src="{{ url_for('static', filename='images/avatar4.jpg') }}"></div>
+        </div>
+        <div class="avatar a4">
+          <div class="avatar-inner"><img src="{{ url_for('static', filename='images/avatar3.jpg') }}"></div>
+        </div>
+        <div class="avatar a5">
+          <div class="avatar-inner"><img src="{{ url_for('static', filename='images/avatar4.jpg') }}"></div>
+        </div>
+
+        <div class="hero-icon">
+          <!-- compass emoji as icon; swap with SVG if you like -->
+          <span><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Compassly Logo"></span>
+        </div>
+      </div>
+
+      <h1 class="hero-title">Compassly</h1>
+      <p class="hero-subtitle">For Women in Tech</p>
+      <p class="hero-copy">
+        Feeling overwhelmed by all the tech career options? You're not alone.
+        Let's cut through the noise and find YOUR path with personalized
+        guidance, real insights, and a concrete action plan.
+      </p>
+
+      <button class="hero-button get-started">Get Started</button>
+    </section>
+
+    <p class="hero-footer-text">
+      Join 2,000+ Ambitious Women Building Bold Careers with Career Compass.
+    </p>
+  </div>
+  {% endif %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="{{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
