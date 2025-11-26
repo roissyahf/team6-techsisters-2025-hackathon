@@ -9,12 +9,13 @@ class CourseItem(BaseModel):
     duration_weeks: Optional[int] = None
     skill_focus: Optional[List[str]] = None
     difficulty: Optional[str] = None
+    rating: Optional[float] = None
+    review_count: Optional[int] = None
 
 
 class SelectedRoleRaw(BaseModel):
-    # Accept flexible shape but require role_id and role_name when available
-    role_id: Optional[str]
-    role_name: Optional[str]
+    role_id: Optional[str] = None
+    role_name: str
     score: Optional[float] = None
     explanation: Optional[str] = None
 
@@ -147,37 +148,175 @@ def flatten_persona(persona_json: Dict[str, Any]) -> PersonaFlat:
 
 
 def normalize_selected_role(selected_role_json: Dict[str, Any]) -> SelectedRoleRaw:
+    """
+    Handles both model output formats:
+    - Model 1: {role_id, role_name, score, explanation}
+    - Model 2: {role_name, score}
+    
+    Expects the SELECTED role only (single object), not the full array of recommendations
+    """
     if isinstance(selected_role_json, dict):
+        # Extract fields with fallbacks
         role_id = selected_role_json.get("role_id") or selected_role_json.get("id") or selected_role_json.get("role")
         role_name = selected_role_json.get("role_name") or selected_role_json.get("name")
         score = selected_role_json.get("score")
         explanation = selected_role_json.get("explanation")
+        
+        # Validate role_name is present
+        if not role_name:
+            raise ValidationError([{"loc": ("role_name",), "msg": "role_name is required", "type": "value_error"}], SelectedRoleRaw)
+        
         return SelectedRoleRaw(role_id=role_id, role_name=role_name, score=score, explanation=explanation)
     else:
         raise ValidationError([{"loc": ("selected_role_json",), "msg": "Invalid selected role format", "type": "type_error"}], SelectedRoleRaw)
 
 
-def normalize_courses(course_list_json: Optional[List[Dict[str, Any]]]) -> List[CourseItem]:
+def parse_skills_string(skills_str: Optional[str]) -> List[str]:
+    """
+    Parse PostgreSQL array string format like '{"skill1","skill2","skill3"}'
+    Returns a list of skills
+    """
+    if not skills_str:
+        return []
+    
+    # Remove curly braces and quotes
+    skills_str = skills_str.strip()
+    if skills_str.startswith('{') and skills_str.endswith('}'):
+        skills_str = skills_str[1:-1]
+    
+    # Split by comma and clean each skill
+    skills = [skill.strip().strip('"').strip() for skill in skills_str.split(',')]
+    return [s for s in skills if s]  # Remove empty strings
+
+
+def parse_duration_to_weeks(duration_str: Optional[str]) -> Optional[int]:
+    """
+    Parse duration strings like '1 - 3 Months', '1 - 4 Weeks' to estimated weeks
+    Returns approximate midpoint in weeks
+    """
+    if not duration_str:
+        return None
+    
+    duration_str = duration_str.strip().lower()
+    
+    # Extract numbers
+    import re
+    numbers = re.findall(r'\d+', duration_str)
+    
+    if not numbers:
+        return None
+    
+    # Calculate midpoint
+    if len(numbers) >= 2:
+        start = int(numbers[0])
+        end = int(numbers[1])
+        avg = (start + end) / 2
+    else:
+        avg = int(numbers[0])
+    
+    # Convert to weeks
+    if 'month' in duration_str:
+        return int(avg * 4)  # Approximate weeks per month
+    elif 'week' in duration_str:
+        return int(avg)
+    else:
+        return None
+
+
+def normalize_courses(course_list_json: Optional[Dict[str, Any]]) -> List[CourseItem]:
+    """
+    Handles the new course recommendation format:
+    {
+        "role": "Software Engineer",
+        "keywords_used": [...],
+        "courses": [
+            {
+                "course_title": "...",
+                "platform": "...",
+                "skills": "{\"skill1\",\"skill2\"}",
+                "rating": 4.9,
+                "reviewcount": 952,
+                "level": "beginner",
+                "duration": "1 - 3 Months",
+                "certificatetype": "Course",
+                "crediteligibility": false
+            }
+        ]
+    }
+    """
     out = []
+    
     if not course_list_json:
         return out
-    for c in course_list_json:
+    
+    # Extract the courses array
+    courses_array = course_list_json.get("courses", [])
+    
+    if not courses_array:
+        return out
+    
+    for c in courses_array:
         try:
-            out.append(CourseItem(**c))
-        except ValidationError:
-            name = c.get("name") or c.get("title") or "Unnamed Course"
+            # Map new structure to CourseItem
+            name = c.get("course_title") or c.get("name") or "Unnamed Course"
+            platform = c.get("platform")
+            
+            # Parse skills from PostgreSQL array format
+            skills_raw = c.get("skills")
+            skill_focus = parse_skills_string(skills_raw)
+            
+            # Parse duration to weeks
+            duration_str = c.get("duration")
+            duration_weeks = parse_duration_to_weeks(duration_str)
+            
+            # Map level to difficulty
+            level = c.get("level", "").strip().lower()
+            if level:
+                difficulty = level.capitalize()
+            else:
+                difficulty = None
+            
+            # Extract rating and review count
+            rating = c.get("rating")
+            review_count = c.get("reviewcount")
+            
+            out.append(CourseItem(
+                name=name,
+                platform=platform,
+                duration_weeks=duration_weeks,
+                skill_focus=skill_focus,
+                difficulty=difficulty,
+                rating=rating,
+                review_count=review_count
+            ))
+        except Exception as e:
+            # Fallback: add with minimal info
+            print(f"Warning: Could not fully parse course: {e}")
+            name = c.get("course_title") or c.get("name") or "Unnamed Course"
             out.append(CourseItem(name=name))
+    
     return out
 
 
-def process_inputs(persona_json: Dict[str, Any], selected_role_json: Dict[str, Any], course_recommendations_json: Optional[List[Dict[str, Any]]] = None) -> ActionPlanRequest:
+def process_inputs(persona_json: Dict[str, Any], selected_role_json: Dict[str, Any], course_recommendations_json: Optional[Dict[str, Any]] = None) -> ActionPlanRequest:
+    """
+    Main processing function that handles all input transformations
+    
+    Args:
+        persona_json: User profile with base questions responses
+        selected_role_json: SINGLE selected role object (from either model 1 or model 2)
+        course_recommendations_json: Course recommendations in new format with nested structure
+    
+    Returns:
+        ActionPlanRequest: Validated and normalized payload ready for LLM
+    """
     # Flatten persona
     persona_flat = flatten_persona(persona_json)
 
-    # Normalize role
+    # Normalize role (handles both model formats)
     selected_role = normalize_selected_role(selected_role_json)
 
-    # Normalize courses
+    # Normalize courses (handles new nested format)
     courses = normalize_courses(course_recommendations_json)
 
     # Infer constraints
@@ -188,9 +327,9 @@ def process_inputs(persona_json: Dict[str, Any], selected_role_json: Dict[str, A
     weekly_commitment = persona_flat.Q9_time_commitment
     preferred_format = persona_flat.Q8_learning_preference
 
-    # If role does not contain id/name, raise
-    if not selected_role.role_id or not selected_role.role_name:
-        raise ValidationError([{"loc": ("selected_role",), "msg": "selected role must contain role_id and role_name", "type": "value_error"}], SelectedRoleRaw)
+    # Validate role has name
+    if not selected_role.role_name:
+        raise ValidationError([{"loc": ("selected_role",), "msg": "selected role must contain role_name", "type": "value_error"}], SelectedRoleRaw)
 
     req = ActionPlanRequest(
         persona=persona_flat,

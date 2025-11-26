@@ -4,8 +4,8 @@ from datetime import datetime
 import os
 from dotenv import load_dotenv
 import json
-from pydantic import BaseModel, Field
-from typing import List, Optional
+from pydantic import BaseModel, Field, ValidationError
+from typing import Optional
 
 # Import processing helper
 from services.processing import process_inputs, ActionPlanRequest
@@ -65,7 +65,9 @@ You MUST generate output ONLY as JSON following this schema:
           "platform": "string or null",
           "duration_weeks": "integer or null",
           "skill_focus": ["string"],
-          "difficulty": "string or null"
+          "difficulty": "string or null",
+          "rating": "float or null",
+          "review_count": "integer or null"
         }
       ],
       "projects": [
@@ -90,7 +92,7 @@ You MUST generate output ONLY as JSON following this schema:
 class RawInput(BaseModel):
     persona_json: dict = Field(...)
     selected_role_json: dict = Field(...)
-    course_recommendations_json: Optional[List[dict]] = Field(default_factory=list)
+    course_recommendations_json: Optional[dict] = Field(default=None)
 
 
 def build_user_prompt(payload: ActionPlanRequest) -> str:
@@ -152,11 +154,11 @@ def call_llm(system_prompt: str, user_prompt: str) -> str:
             print("LLM RESPONSE OBJECT:", response)
             raise ValueError("Empty LLM output")
 
-        print("✓ LLM response received successfully")
+        print("LLM response received successfully")
         return llm_raw
 
     except Exception as e:
-        print("✗ LLM ERROR:", e)
+        print("LLM ERROR:", e)
         print("Error type:", type(e).__name__)
         raise RuntimeError(f"LLM call failed: {e}")
 
@@ -172,16 +174,17 @@ def generate_plan():
         selected_role_json = raw.selected_role_json
         course_recommendations_json = raw.course_recommendations_json
 
+        print("Processing inputs...")
         # processing_input will validate, flatten and return ActionPlanRequest
         payload: ActionPlanRequest = process_inputs(persona_json, selected_role_json, course_recommendations_json)
 
         system_prompt = SYSTEM_PROMPT
         user_prompt = build_user_prompt(payload)
 
-        print("→ Calling LLM...")
+        print("Calling LLM...")
         llm_output = call_llm(system_prompt, user_prompt)
 
-        print("→ Parsing LLM response...")
+        print("Parsing LLM response...")
         # Clean potential markdown code blocks
         llm_output_clean = llm_output.strip()
         if llm_output_clean.startswith("```json"):
@@ -197,9 +200,16 @@ def generate_plan():
         parsed["plan_meta"]["start_date"] = parsed["plan_meta"].get("start_date") or None
         parsed["plan_meta"]["weekly_commitment"] = payload.weekly_commitment
 
-        print("✓ Action plan generated successfully")
+        print("Action plan generated successfully")
         return jsonify(parsed), 200
 
+    except ValidationError as e:
+        print("Validation Error:", e)
+        return jsonify({
+            "error": "Input validation failed",
+            "details": e.errors(),
+            "debug_note": "Check that your JSON structure matches the expected format"
+        }), 400
     except json.JSONDecodeError as e:
         print("JSON Parse Error:", e)
         print("LLM Output was:", llm_output if 'llm_output' in locals() else "Not available")
@@ -208,7 +218,7 @@ def generate_plan():
             "debug_note": "The LLM did not return valid JSON. Check the raw output above in server logs."
         }), 400
     except Exception as e:
-        print("✗ General Error:", e)
+        print("General Error:", e)
         print("Error type:", type(e).__name__)
         return jsonify({
             "error": str(e),
