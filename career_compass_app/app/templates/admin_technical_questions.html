@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Technical Questions{% endblock %}
+{% block content %}
+<h2>Technical Questions</h2>
+<form method="post" action="/admin/technical_questions">
+  <label>Category
+    <select name="category_id" required>
+      <option value="">-- choose --</option>
+      {% for c in categories %}
+      <option value="{{ c.id }}">{{ c.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Job Role (Optional)
+    <select name="job_roles_id">
+      <option value="">-- choose --</option>
+      {% for jr in job_roles %}
+      <option value="{{ jr.id }}">{{ jr.title }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Prompt <input type="text" name="prompt" required></label>
+  <label>Type
+    <select name="type" required>
+      {% for t in ["single", "multi", "scale", "text", "boolean", "number"] %}
+      <option value="{{ t }}">{{ t }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Required? <input type="checkbox" name="is_required" value="1"></label>
+  <label>Position <input type="number" name="position" value="0"></label>
+  <label>Meta (JSON) <textarea name="meta" rows="3" placeholder='{"min":1,"max":5}'></textarea></label>
+  <button type="submit">Create</button>
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Category</th>
+      <th>Job Role</th>
+      <th>Prompt</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Position</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tq in technical_questions %}
+    <tr>
+      <td>{{ tq.id }}</td>
+      <td>{{ tq.category.name if tq.category else tq.category_id }}</td>
+      <td>{{ tq.job_role.title if tq.job_role else '' }}</td>
+      <td>{{ tq.prompt }}</td>
+      <td>{{ tq.type }}</td>
+      <td>{{ "yes" if tq.is_required else "no" }}</td>
+      <td>{{ tq.position }}</td>
+      <td>
+        <form method="post" action="/admin/technical_questions/{{ tq.id }}/delete" style="display:inline;">
+          <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
