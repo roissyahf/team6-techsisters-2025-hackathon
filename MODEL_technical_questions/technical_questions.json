@@ -1,0 +1,62 @@
+[
+  {
+    "id": "T1_programming",
+    "skill": "programming",
+    "question": "How comfortable are you with writing code in at least one programming language?",
+    "scale": {
+      "1": "I have never written code",
+      "2": "I can understand basic examples",
+      "3": "I can write simple programs",
+      "4": "I can build small projects",
+      "5": "I can build complex applications"
+    }
+  },
+  {
+    "id": "T2_problem_solving",
+    "skill": "problem_solving",
+    "question": "How confident are you solving logical or algorithmic problems?",
+    "scale": {
+      "1": "Very difficult",
+      "2": "Somewhat difficult",
+      "3": "Manageable with guidance",
+      "4": "Strong",
+      "5": "Very strong"
+    }
+  },
+  {
+    "id": "T3_debugging",
+    "skill": "debugging",
+    "question": "How comfortable are you with debugging and understanding code errors?",
+    "scale": {
+      "1": "Not comfortable",
+      "2": "Somewhat comfortable",
+      "3": "Moderately comfortable",
+      "4": "Comfortable",
+      "5": "Very comfortable"
+    }
+  },
+  {
+    "id": "T4_system_understanding",
+    "skill": "system_understanding",
+    "question": "How well do you understand how frontend, backend, database, and APIs work together?",
+    "scale": {
+      "1": "Not at all",
+      "2": "Very little",
+      "3": "Basic understanding",
+      "4": "Good understanding",
+      "5": "Strong understanding"
+    }
+  },
+  {
+    "id": "T5_tools_familiarity",
+    "skill": "tools_familiarity",
+    "question": "How familiar are you with Git, GitHub, IDEs, cloud tools, or Docker?",
+    "scale": {
+      "1": "Not familiar",
+      "2": "Slightly familiar",
+      "3": "Moderately familiar",
+      "4": "Familiar",
+      "5": "Very familiar"
+    }
+  }
+]
