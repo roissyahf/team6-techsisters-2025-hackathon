@@ -1,6 +1,19 @@
-import os
+import sys
+from pathlib import Path
+
+# Get the path of the current file being executed
+FILE = Path(__file__).resolve()
+# Determine the project root directory
+ROOT = FILE.parent.parent
+# Add the project root to Python's search path
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+from utils.path_helpers import get_absolute_path
 import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATASET_PATH = get_absolute_path("MODEL_API_TECHNICAL_COURSE", "datasets", "Coursera.csv")
 
 class CourseRecommenderModel:
     """
@@ -10,12 +23,7 @@ class CourseRecommenderModel:
     """
 
     def __init__(self,
-                 dataset_path="MODEL_technical_questions/datasets/Coursera.csv"):
-
-        # Make path absolute (robust when called from APIs)
-        dataset_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "datasets", "Coursera.csv")
-        )
+                 dataset_path=DATASET_PATH):
 
         self.df = pd.read_csv(dataset_path)
 
