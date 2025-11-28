@@ -10,8 +10,8 @@ def load_base_responses(base_json):
 
 def map_base_to_features(responses):
     """
-    Convert base questions answers into numerical feature scores (0–5 scale).
-    Only uses the information from sample_X.json files you uploaded.
+    Convert base questions answers into numerical feature scores (0-5 scale).
+    Only uses the information from sample.json files.
     """
 
     features = {

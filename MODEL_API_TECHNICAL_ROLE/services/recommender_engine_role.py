@@ -3,8 +3,8 @@ import sys, os
 # Add project root to Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
-from MODEL_technical_questions.processing import build_user_scores
-from MODEL_technical_questions.model import TechnicalHybridModel
+from MODEL_API_TECHNICAL_ROLE.services.processing import build_user_scores
+from MODEL_API_TECHNICAL_ROLE.services.model import TechnicalHybridModel
 
 # Load hybrid model
 role_model = TechnicalHybridModel()
@@ -26,6 +26,6 @@ def run_role_pipeline(payload):
     return {
         "top_roles": [
             {"role_name": r, "score": float(s)}
-            for r, s in ranked[:5]
+            for r, s in ranked[:3]
         ]
     }

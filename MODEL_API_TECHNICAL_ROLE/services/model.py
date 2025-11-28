@@ -1,5 +1,21 @@
+import sys
+from pathlib import Path
+
+# Get the path of the current file being executed
+FILE = Path(__file__).resolve()
+# Determine the project root directory
+ROOT = FILE.parent.parent
+# Add the project root to Python's search path
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+from utils.path_helpers import get_absolute_path
 import json
 import numpy as np
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+ROLE_DATASET_PATH = get_absolute_path("MODEL_API_TECHNICAL_ROLE", "static_data", "role_dataset.json")
+WEIGHT_PATH = get_absolute_path("MODEL_API_TECHNICAL_ROLE", "static_data", "scoring_weights.json")
 
 class TechnicalHybridModel:
     """
@@ -9,9 +25,9 @@ class TechnicalHybridModel:
     2. Cosine Similarity
     """
 
-    def __init__(self, 
-                 role_dataset_path="../MODEL_technical_questions/role_dataset.json",
-                 weight_path="../MODEL_technical_questions/scoring_weights.json"):
+    def __init__(self,
+                 role_dataset_path=ROLE_DATASET_PATH,
+                 weight_path=WEIGHT_PATH):
 
         # Load role dataset
         with open(role_dataset_path, "r", encoding="utf-8") as f:
@@ -45,7 +61,7 @@ class TechnicalHybridModel:
     def weighted_scoring(self, user_scores):
         """
         Weighted Scoring Model (WSM):
-        Σ (user_skill × role_skill × weight)
+        Σ (user_skill x role_skill x weight)
         plus weighted base features.
         """
         role_scores = {}
@@ -91,7 +107,7 @@ class TechnicalHybridModel:
     def hybrid(self, user_scores, alpha=0.6):
         """
         Final combined hybrid score:
-        Hybrid = α × WSM + (1 − α) × Similarity
+        Hybrid = alpha x WSM + (1 - alpha) x Similarity
         """
         wsm_scores = self.weighted_scoring(user_scores)
         sim_scores = self.similarity_scores(user_scores)
