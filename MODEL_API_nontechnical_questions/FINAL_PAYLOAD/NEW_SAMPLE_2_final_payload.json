@@ -1,0 +1,53 @@
+{
+    "user_id": "USR_20251113_002",
+    "persona_flags": {
+        "beginner": false,
+        "low_time": false,
+        "remote_only": false,
+        "career_break": false
+    },
+    "persona_summary": "The user is currently a working professional (non-tech), interested in working with data and insights, identifying as intermediate (i have some hands-on experience or projects), and can dedicate about 7-10 hours per week to learning.",
+    "aptitude_vector": [
+        0.75,
+        1.0,
+        0.5,
+        0.75,
+        1.0,
+        0.75
+    ],
+    "dynamic_answers": {
+        "dynamic_answers": [
+            {
+                "competency": "A",
+                "selected_option": "B",
+                "option_text": "I usually outline the main tasks and prioritize them, but sometimes I skip finer details."
+            },
+            {
+                "competency": "B",
+                "selected_option": "A",
+                "option_text": "I start by defining clear objectives and then explore the data thoroughly to uncover patterns before making informed decisions."
+            },
+            {
+                "competency": "C",
+                "selected_option": "C",
+                "option_text": "I tend to stick to familiar concepts and rarely seek user input for new ideas."
+            },
+            {
+                "competency": "D",
+                "selected_option": "B",
+                "option_text": "I identify some risks and consider basic plans, but may overlook less obvious ones."
+            },
+            {
+                "competency": "E",
+                "selected_option": "A",
+                "option_text": "I actively listen and clarify points to ensure everyone understands the objectives and tasks."
+            },
+            {
+                "competency": "F",
+                "selected_option": "B",
+                "option_text": "I usually write clearly but may not revise as thoroughly as I should for clarity."
+            }
+        ]
+    },
+    "dynamic_text": "The user is currently a working professional (non-tech), interested in working with data and insights, identifying as intermediate (i have some hands-on experience or projects), and can dedicate about 7-10 hours per week to learning. I usually outline the main tasks and prioritize them, but sometimes I skip finer details. I start by defining clear objectives and then explore the data thoroughly to uncover patterns before making informed decisions. I tend to stick to familiar concepts and rarely seek user input for new ideas. I identify some risks and consider basic plans, but may overlook less obvious ones. I actively listen and clarify points to ensure everyone understands the objectives and tasks. I usually write clearly but may not revise as thoroughly as I should for clarity."
+}

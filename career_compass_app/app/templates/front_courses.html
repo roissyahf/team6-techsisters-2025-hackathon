@@ -1,0 +1,26 @@
+{% extends "front_base.html" %}
+{% block title %}Compassly{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+  <div class="auth-card quiz-card">
+      <div class="brand">
+        <div class="brand-icon">
+          <span> <span><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Compassly Logo"></span></span>
+        </div>
+        <div class="brand-title">Compassly</div>
+      </div>
+
+      <h1 class="auth-heading" id="page_heading">Recommended Courses</h1>
+      <p class="auth-subtitle" id="page_desc">Please view the following courses.</p>
+      <p>{{data}}</p>
+        <input type="text" name="user_id" id="user_id" value="{{ user_id }}">
+         <input type="text" name="job_role" id="job_id" value="{{ job_role }}">
+          <input type="text" name="role_id" id="role_id" value="{{ role_id }}">
+  <input type="button" name="submit" id="view_courses_btn" class="hero-button btn btn-primary" value="View Courses">
+</div>
+</div>
+
+<p class="footer-text">
+  Join 2,000+ Ambitious Women Building Bold Careers with Career Compass.
+</p>
+{% endblock %}
