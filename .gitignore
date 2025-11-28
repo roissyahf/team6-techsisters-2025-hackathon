@@ -12,7 +12,6 @@ __init__.py
 .env
 
 # In progress code
-API_dynamic_technical_questions/*
 
 # Archieved code
 

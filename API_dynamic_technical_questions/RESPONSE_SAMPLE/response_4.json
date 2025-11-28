@@ -1,0 +1,62 @@
+[
+  {
+    "id": "T4_system_understanding",
+    "question": "How well do you understand the interactions between different security components in a network?",
+    "scale": {
+      "1": "No understanding of component interactions",
+      "2": "Basic awareness of components with substantial help",
+      "3": "Can describe how components interact with some guidance",
+      "4": "Can explain interactions and their importance independently",
+      "5": "Can analyze complex systems and their security implications comprehensively"
+    },
+    "skill": "system_understanding"
+  },
+  {
+    "id": "T3_debugging",
+    "question": "How capable are you of diagnosing a simple security-related issue, such as a failed login attempt?",
+    "scale": {
+      "1": "Cannot diagnose issues at all",
+      "2": "Can troubleshoot with detailed instructions",
+      "3": "Can diagnose basic issues with some guidance",
+      "4": "Can diagnose and fix simple issues independently",
+      "5": "Can identify root causes and prevent future issues proactively"
+    },
+    "skill": "debugging"
+  },
+  {
+    "id": "T2_problem_solving",
+    "question": "How well can you identify a potential security vulnerability from a given scenario?",
+    "scale": {
+      "1": "Cannot identify any vulnerabilities",
+      "2": "Can identify basic vulnerabilities with help",
+      "3": "Can identify common vulnerabilities on my own",
+      "4": "Can analyze scenarios and suggest improvements independently",
+      "5": "Can evaluate complex situations and propose comprehensive solutions"
+    },
+    "skill": "problem_solving"
+  },
+  {
+    "id": "T1_programming",
+    "question": "How effectively can you write a basic script to automate a security task, such as checking for open ports?",
+    "scale": {
+      "1": "Cannot write any script",
+      "2": "Can write a script with significant guidance",
+      "3": "Can write a basic script with minimal assistance",
+      "4": "Can write scripts independently for simple tasks",
+      "5": "Can optimize scripts and explain their functionality to others"
+    },
+    "skill": "programming"
+  },
+  {
+    "id": "T5_tools_familiarity",
+    "question": "How comfortable are you using basic security tools, such as a password manager or antivirus software?",
+    "scale": {
+      "1": "Have never used any security tools",
+      "2": "Have tried using tools with significant support",
+      "3": "Can use basic tools with minimal assistance",
+      "4": "Can operate tools independently and troubleshoot basic issues",
+      "5": "Can evaluate and recommend tools based on security needs"
+    },
+    "skill": "tools_familiarity"
+  }
+]

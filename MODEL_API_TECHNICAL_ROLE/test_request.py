@@ -17,12 +17,11 @@ import os
 BASE_DIR = Path(__file__).resolve().parents[1]
 
 # --- 1. Configuration ---
-# The API runs on port 5010 as defined in app.py, and the endpoint is /recommend-role
 API_URL = "http://127.0.0.1:5010/recommend-role"
 
 # Define the paths to the JSON input files
-BASE_ANSWER_PATH = get_absolute_path('base_questions', 'sample_2.json')
-TECHNICAL_ANSWERS_PATH = get_absolute_path('MODEL_API_TECHNICAL_ROLE', 'technical_questions_answer.json')
+BASE_ANSWER_PATH = get_absolute_path('base_questions', 'sample_4.json')
+TECHNICAL_ANSWERS_PATH = get_absolute_path('MODEL_API_TECHNICAL_ROLE', 'sample', 'technical_questions_answer2.json')
 
 # --- 2. Load JSON Data ---
 try:
