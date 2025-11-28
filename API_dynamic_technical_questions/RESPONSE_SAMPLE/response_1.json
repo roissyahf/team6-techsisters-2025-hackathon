@@ -1,0 +1,62 @@
+[
+  {
+    "id": "T4_system_understanding",
+    "question": "How well do you understand how different design components interact in a user interface?",
+    "scale": {
+      "1": "No understanding of component interactions",
+      "2": "Basic awareness of interactions with guidance",
+      "3": "Can explain interactions between simple components",
+      "4": "Can analyze and design interactions in a system",
+      "5": "Can create complex systems with seamless interactions"
+    },
+    "skill": "system_understanding"
+  },
+  {
+    "id": "T2_problem_solving",
+    "question": "How effectively can you identify user needs and propose design solutions?",
+    "scale": {
+      "1": "Cannot identify user needs",
+      "2": "Can identify user needs with support",
+      "3": "Can identify and propose simple solutions independently",
+      "4": "Can analyze user feedback and refine solutions",
+      "5": "Can lead user research and develop comprehensive design strategies"
+    },
+    "skill": "problem_solving"
+  },
+  {
+    "id": "T5_tools_familiarity",
+    "question": "How familiar are you with using design tools like Figma or Adobe XD?",
+    "scale": {
+      "1": "Never used any design tools",
+      "2": "Tried using design tools with heavy support",
+      "3": "Can use basic features of design tools independently",
+      "4": "Can create designs using advanced features of tools",
+      "5": "Can train others in effective use of design tools"
+    },
+    "skill": "tools_familiarity"
+  },
+  {
+    "id": "T1_programming",
+    "question": "How well can you create basic HTML and CSS layouts for a user interface?",
+    "scale": {
+      "1": "Cannot create any layouts",
+      "2": "Can create a simple layout with guidance",
+      "3": "Can create basic layouts independently",
+      "4": "Can create responsive layouts with minimal issues",
+      "5": "Can create complex layouts and optimize for performance"
+    },
+    "skill": "programming"
+  },
+  {
+    "id": "T3_debugging",
+    "question": "How well can you troubleshoot issues in a design prototype?",
+    "scale": {
+      "1": "Cannot troubleshoot any issues",
+      "2": "Can identify basic issues with support",
+      "3": "Can troubleshoot common issues independently",
+      "4": "Can resolve issues and suggest improvements",
+      "5": "Can diagnose complex problems and implement effective solutions"
+    },
+    "skill": "debugging"
+  }
+]
