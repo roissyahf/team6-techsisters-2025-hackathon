@@ -12,6 +12,7 @@ __init__.py
 .env
 
 # In progress code
+utils/role_info_service.py
 
 # Archieved code
 
