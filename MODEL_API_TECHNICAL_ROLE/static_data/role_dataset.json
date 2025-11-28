@@ -80,7 +80,7 @@
     ]
   },
   {
-    "role": "QA Engineer",
+    "role": "Quality Assurance Engineer",
     "skills": {
       "programming": 3,
       "problem_solving": 4,
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "role": "ML Engineer",
+    "role": "Machine Learning Engineer",
     "skills": {
       "programming": 5,
       "problem_solving": 4,
@@ -160,7 +160,7 @@
     ]
   },
   {
-    "role": "BI Analyst",
+    "role": "Business Intelligence Analyst",
     "skills": {
       "programming": 2,
       "problem_solving": 3,
