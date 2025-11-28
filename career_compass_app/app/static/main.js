@@ -43,6 +43,9 @@ $(document).ready(function() {
             //Window.alert("HELLO");
             createJsonDataJobRolesOutput();
         });*/
+        $(".brand-title").click(function(){
+            window.location.href="/";
+        });
 });
 
 function validateBaseQuestionsForm(){

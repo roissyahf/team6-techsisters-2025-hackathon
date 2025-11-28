@@ -536,3 +536,6 @@
         gap: 34px;
       }
     }
+    .brand-title,.brand-logo{
+      cursor:pointer;
+    }

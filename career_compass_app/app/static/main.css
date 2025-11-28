@@ -840,4 +840,6 @@ body.locked{
       }
     }
 
-    
+    .brand-title,.brand-logo{
+      cursor:pointer;
+    }
