@@ -1,0 +1,62 @@
+[
+  {
+    "id": "T2_problem_solving",
+    "question": "How effectively can you analyze a dataset to identify trends or patterns?",
+    "scale": {
+      "1": "Cannot analyze data for trends or patterns",
+      "2": "Can identify basic trends with help",
+      "3": "Can recognize some patterns in data independently",
+      "4": "Can analyze data to extract meaningful trends and insights",
+      "5": "Can design comprehensive analyses to uncover deep insights"
+    },
+    "skill": "problem_solving"
+  },
+  {
+    "id": "T1_programming",
+    "question": "How proficient are you in writing basic code to manipulate data using a programming language like Python or R?",
+    "scale": {
+      "1": "Cannot write any code for data manipulation",
+      "2": "Can write very simple code with significant help",
+      "3": "Can write basic code with minimal guidance",
+      "4": "Can write code for common data manipulation tasks independently",
+      "5": "Can write complex code and optimize for performance"
+    },
+    "skill": "programming"
+  },
+  {
+    "id": "T4_system_understanding",
+    "question": "How well do you understand how different components of a data pipeline interact?",
+    "scale": {
+      "1": "No understanding of data pipeline components",
+      "2": "Can describe components with assistance",
+      "3": "Can explain basic interactions between components",
+      "4": "Can understand and describe how components work together in a pipeline",
+      "5": "Can analyze and optimize interactions within complex data systems"
+    },
+    "skill": "system_understanding"
+  },
+  {
+    "id": "T3_debugging",
+    "question": "How capable are you at identifying errors in data processing scripts or models?",
+    "scale": {
+      "1": "Cannot identify errors in scripts",
+      "2": "Can locate simple errors with assistance",
+      "3": "Can find and fix basic errors independently",
+      "4": "Can troubleshoot and resolve common issues in scripts",
+      "5": "Can diagnose complex issues and implement effective fixes"
+    },
+    "skill": "debugging"
+  },
+  {
+    "id": "T5_tools_familiarity",
+    "question": "How comfortable are you with using data analytics tools (e.g., Excel, Tableau) for basic data tasks?",
+    "scale": {
+      "1": "Never used any data analytics tools",
+      "2": "Tried using tools with heavy support",
+      "3": "Can perform basic tasks using tools independently",
+      "4": "Can use tools effectively for various data tasks",
+      "5": "Can teach others how to use data tools proficiently"
+    },
+    "skill": "tools_familiarity"
+  }
+]

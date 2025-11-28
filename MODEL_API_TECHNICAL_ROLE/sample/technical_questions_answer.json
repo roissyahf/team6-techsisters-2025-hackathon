@@ -1,0 +1,48 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-13T08:15:00Z",
+    "user_id": "USR_20251113_001",
+    "responses": [
+      {
+    "id": "T1_programming",
+    "skill": "programming",
+    "question": "How comfortable are you with writing code in at least one programming language?",
+    "answer": {
+      "2": "I can understand basic examples"
+    }
+  },
+  {
+    "id": "T2_problem_solving",
+    "skill": "problem_solving",
+    "question": "How confident are you solving logical or algorithmic problems?",
+    "answer": {
+      "3": "Manageable with guidance"
+    }
+  },
+  {
+    "id": "T3_debugging",
+    "skill": "debugging",
+    "question": "How comfortable are you with debugging and understanding code errors?",
+    "answer": {
+      "2": "Somewhat comfortable"
+    }
+  },
+  {
+    "id": "T4_system_understanding",
+    "skill": "system_understanding",
+    "question": "How well do you understand how frontend, backend, database, and APIs work together?",
+    "answer": {
+      "3": "Basic understanding"
+    }
+  },
+  {
+    "id": "T5_tools_familiarity",
+    "skill": "tools_familiarity",
+    "question": "How familiar are you with Git, GitHub, IDEs, cloud tools, or Docker?",
+    "answer": {
+      "3": "Moderately familiar"
+    }
+  }
+]
+  }
+}

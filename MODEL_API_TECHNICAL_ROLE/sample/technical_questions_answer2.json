@@ -1,0 +1,48 @@
+{
+  "user_profile": {
+    "timestamp": "2025-11-28T08:15:00Z",
+    "user_id": "USR_20251128_001",
+    "responses": [
+      {
+    "id": "T4_system_understanding",
+    "question": "How well do you understand the interactions between different security components in a network?",
+    "scale": {
+      "4": "Can explain interactions and their importance independently"
+    },
+    "skill": "system_understanding"
+  },
+  {
+    "id": "T3_debugging",
+    "question": "How capable are you of diagnosing a simple security-related issue, such as a failed login attempt?",
+    "scale": {
+      "2": "Can troubleshoot with detailed instructions"
+    },
+    "skill": "debugging"
+  },
+  {
+    "id": "T2_problem_solving",
+    "question": "How well can you identify a potential security vulnerability from a given scenario?",
+    "scale": {
+      "4": "Can analyze scenarios and suggest improvements independently"
+    },
+    "skill": "problem_solving"
+  },
+  {
+    "id": "T1_programming",
+    "question": "How effectively can you write a basic script to automate a security task, such as checking for open ports?",
+    "scale": {
+      "2": "Can write a script with significant guidance"
+    },
+    "skill": "programming"
+  },
+  {
+    "id": "T5_tools_familiarity",
+    "question": "How comfortable are you using basic security tools, such as a password manager or antivirus software?",
+    "scale": {
+      "4": "Can operate tools independently and troubleshoot basic issues"
+    },
+    "skill": "tools_familiarity"
+  }
+]
+  }
+}
