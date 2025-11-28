@@ -149,14 +149,22 @@ def flatten_persona(persona_json: Dict[str, Any]) -> PersonaFlat:
 
 def normalize_selected_role(selected_role_json: Dict[str, Any]) -> SelectedRoleRaw:
     """
-    Handles both model output formats:
+    Handles multiple selected role formats:
+    - New format: {"top_role": "Software Engineer"}
     - Model 1: {role_id, role_name, score, explanation}
     - Model 2: {role_name, score}
     
     Expects the SELECTED role only (single object), not the full array of recommendations
     """
     if isinstance(selected_role_json, dict):
-        # Extract fields with fallbacks
+        # NEW FORMAT: {"top_role": "..."}
+        if "top_role" in selected_role_json:
+            role_name = selected_role_json.get("top_role")
+            if not role_name:
+                raise ValidationError([{"loc": ("top_role",), "msg": "top_role cannot be empty", "type": "value_error"}], SelectedRoleRaw)
+            return SelectedRoleRaw(role_id=None, role_name=role_name, score=None, explanation=None)
+        
+        # LEGACY FORMATS: Extract fields with fallbacks
         role_id = selected_role_json.get("role_id") or selected_role_json.get("id") or selected_role_json.get("role")
         role_name = selected_role_json.get("role_name") or selected_role_json.get("name")
         score = selected_role_json.get("score")
@@ -164,7 +172,7 @@ def normalize_selected_role(selected_role_json: Dict[str, Any]) -> SelectedRoleR
         
         # Validate role_name is present
         if not role_name:
-            raise ValidationError([{"loc": ("role_name",), "msg": "role_name is required", "type": "value_error"}], SelectedRoleRaw)
+            raise ValidationError([{"loc": ("role_name",), "msg": "role_name or top_role is required", "type": "value_error"}], SelectedRoleRaw)
         
         return SelectedRoleRaw(role_id=role_id, role_name=role_name, score=score, explanation=explanation)
     else:
@@ -216,7 +224,7 @@ def parse_duration_to_weeks(duration_str: Optional[str]) -> Optional[int]:
     
     # Convert to weeks
     if 'month' in duration_str:
-        return int(avg * 4)  # Approximate weeks per month
+        return int(avg * 4)
     elif 'week' in duration_str:
         return int(avg)
     else:
@@ -303,8 +311,11 @@ def process_inputs(persona_json: Dict[str, Any], selected_role_json: Dict[str, A
     Main processing function that handles all input transformations
     
     Args:
-        persona_json: User profile with base questions responses
-        selected_role_json: SINGLE selected role object (from either model 1 or model 2)
+        persona_json: User profile with base questions responses (unchanged format)
+        selected_role_json: SINGLE selected role object
+            - New format: {"top_role": "Software Engineer"}
+            - Legacy Model 1: {role_id, role_name, score, explanation}
+            - Legacy Model 2: {role_name, score}
         course_recommendations_json: Course recommendations in new format with nested structure
     
     Returns:
@@ -313,7 +324,7 @@ def process_inputs(persona_json: Dict[str, Any], selected_role_json: Dict[str, A
     # Flatten persona
     persona_flat = flatten_persona(persona_json)
 
-    # Normalize role (handles both model formats)
+    # Normalize role (handles new and legacy formats)
     selected_role = normalize_selected_role(selected_role_json)
 
     # Normalize courses (handles new nested format)
@@ -329,7 +340,7 @@ def process_inputs(persona_json: Dict[str, Any], selected_role_json: Dict[str, A
 
     # Validate role has name
     if not selected_role.role_name:
-        raise ValidationError([{"loc": ("selected_role",), "msg": "selected role must contain role_name", "type": "value_error"}], SelectedRoleRaw)
+        raise ValidationError([{"loc": ("selected_role",), "msg": "selected role must contain role_name or top_role", "type": "value_error"}], SelectedRoleRaw)
 
     req = ActionPlanRequest(
         persona=persona_flat,
