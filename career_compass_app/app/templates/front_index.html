@@ -13,7 +13,7 @@
       <h1 class="auth-heading" id="page_heading">Submit the Quiz</h1>
       <p class="auth-subtitle" id="page_desc">Please answer the following questions.</p>
       <div class="base_questions">
-<form method="post" action="/" enctype="multipart/form-data" id="quiz">
+<form method="post" action="/accept_tech_role" enctype="multipart/form-data" id="quiz">
     <div class="quiz_errors" id="quiz_errors"></div>
  {% for cat in categories %}
  <h2 class="link_text">{{ cat.name}}</h2>
@@ -48,6 +48,7 @@
 
 {% endfor %}  
     <input type="hidden" name="user_id" id="user_id" value="{{ user_id }}">
+     <input type="hidden" name="selected_role" id="selected_role" value="0">
   <input type="button" name="submit" id="submit_quiz_btn" class="hero-button btn btn-primary" value="Submit">
 </div>
 <div class="technical_questions">
@@ -56,7 +57,7 @@
 <div class="technical_roles">
     
 </div>
-
+<div class="courses"></div>
 </form>
 </div>
 </div>

@@ -8,6 +8,7 @@ import http.client
 from datetime import datetime
 from flask_login import current_user, login_required
 import os
+import ast
 from dotenv import load_dotenv
 from openai import OpenAI
 from typing import List, Literal, Dict, Any
@@ -64,8 +65,35 @@ def health():
     cats = Category.query.order_by(Category.position.asc(), Category.id.asc()).all()
     qs = Question.query.order_by(Question.category_id.asc(), Question.position.asc()).all()
     user_id = current_user.id
-    return render_template("front_index.html", categories=cats, questions=qs, user_id=user_id)
+    user = User.query.get(user_id)
+    role_id = user.job_role_id
+    if not role_id:
+        return render_template("front_index.html", categories=cats, questions=qs, user_id=user_id)
+    else:
+        courses = Course.query.filter_by(user_id=user_id).all()
+        now = datetime.now()
+        return render_template("dashboard.html",courses=courses, now=now)
     #return {"status": "hello"}
+
+
+@web.get("/dashboard")
+@auth_required() 
+def dashboard():
+    user_id = current_user.id
+    courses = Course.query.filter_by(user_id=user_id).all()
+    now = datetime.now()
+    return render_template("dashboard.html", courses=courses, now=now)
+
+
+@web.get("/retake-quiz")
+@auth_required() 
+def retake_quiz():
+    cats = Category.query.order_by(Category.position.asc(), Category.id.asc()).all()
+    qs = Question.query.order_by(Question.category_id.asc(), Question.position.asc()).all()
+    user_id = current_user.id
+    user = User.query.get(user_id)
+    role_id = user.job_role_id
+    return render_template("front_index.html", categories=cats, questions=qs, user_id=user_id)
 
 @web.get("/loading")
 def loader():
@@ -245,12 +273,20 @@ def list_answers():
 # ------- Web Admin -------
 @web.get("/admin")
 def admin_index():
-    return render_template("admin_index.html")
+    user_id = current_user.id
+    if user_id == 1:
+        return render_template("admin_index.html")
+    else:
+      return "Access denied", 403
 
 @web.get("/admin/categories")
 def admin_categories():
-    cats = Category.query.order_by(Category.position.asc(), Category.id.asc()).all()
-    return render_template("admin_categories.html", categories=cats)
+    user_id = current_user.id
+    if user_id == 1:
+        cats = Category.query.order_by(Category.position.asc(), Category.id.asc()).all()
+        return render_template("admin_categories.html", categories=cats)
+    else:
+      return "Access denied", 403
 
 @web.post("/admin/categories")
 def admin_create_category():
@@ -359,12 +395,14 @@ def admin_delete_job_role(id):
 @web.get("/admin/courses")
 def admin_courses():
     job_roles = JobRole.query.order_by(JobRole.title.asc()).all()
+    users = User.query.order_by(User.email.asc()).all()
     courses = Course.query.order_by(Course.id.desc()).all()
-    return render_template("admin_courses.html", job_roles=job_roles, courses=courses)
+    return render_template("admin_courses.html", job_roles=job_roles, users=users, courses=courses)
 
 @web.post("/admin/courses")
 def admin_create_course():
     title = request.form.get("title")
+    course_title = request.form.get("course_title")
     description = request.form.get("description")
     location = request.form.get("location")
     job_roles_id = request.form.get("job_roles_id")
@@ -372,18 +410,50 @@ def admin_create_course():
     start_date = request.form.get("start_date")
     end_date = request.form.get("end_date")
     
+    # New fields
+    platform = request.form.get("platform")
+    skills_raw = request.form.get("skills")
+    rating = request.form.get("rating")
+    reviewcount = request.form.get("reviewcount")
+    level = request.form.get("level")
+    duration = request.form.get("duration")
+    certificatetype = request.form.get("certificatetype")
+    crediteligibility = request.form.get("crediteligibility") == "1"
+    user_id = request.form.get("user_id")
+    
     if not title or not job_roles_id:
         flash("Title and Job Role are required", "error")
         return redirect(url_for("web.admin_courses"))
     
+    # Parse skills JSON
+    skills = []
+    if skills_raw:
+        try:
+            skills = json.loads(skills_raw)
+            if not isinstance(skills, list):
+                skills = []
+        except:
+            # If not valid JSON, try to parse as comma-separated string
+            skills = [s.strip() for s in skills_raw.split(",") if s.strip()]
+    
     course = Course(
         title=title,
+        course_title=course_title,
         description=description,
         location=location,
         job_roles_id=int(job_roles_id),
         timeline=timeline,
         start_date=datetime.strptime(start_date, "%Y-%m-%d").date() if start_date else None,
-        end_date=datetime.strptime(end_date, "%Y-%m-%d").date() if end_date else None
+        end_date=datetime.strptime(end_date, "%Y-%m-%d").date() if end_date else None,
+        platform=platform,
+        skills=skills,
+        rating=float(rating) if rating else None,
+        reviewcount=int(reviewcount) if reviewcount else None,
+        level=level,
+        duration=duration,
+        certificatetype=certificatetype,
+        crediteligibility=crediteligibility,
+        user_id=int(user_id) if user_id else None
     )
     db.session.add(course)
     db.session.commit()
@@ -873,6 +943,7 @@ def accept_role():
     roles = JobRole.query.filter(JobRole.title.ilike(f"%{job_role}%")).all()
     role_id = roles[0].id
     user = User.query.get(user_id)
+    first_name = user.firstname
     user.job_role_id = role_id
     db.session.commit()
     conn = http.client.HTTPConnection("127.0.0.1", 5011)
@@ -886,8 +957,13 @@ def accept_role():
     conn.request("POST", "/recommend-course", payload, headers)
     res = conn.getresponse()
     data = res.read()
-    #print(data.decode("utf-8"))
-    return render_template("front_courses.html", user_id=user_id, job_role=job_role, role_id=role_id, data=data)
+    courses_data = json.loads(data)
+    for course in courses_data["courses"]:
+        course["skills_list"] = list(ast.literal_eval(course["skills"]))
+        tc = Course(title=course["course_title"], job_roles_id=role_id, user_id=user_id , duration=course["duration"], level=course["level"], rating=course["rating"], reviewcount=course["reviewcount"], skills=course["skills_list"] )
+        db.session.add(tc)
+    db.session.commit()
+    return render_template("front_courses.html", user_id=user_id, job_role=job_role, timeline=role_id, data=courses_data, first_name=first_name)
 
 # --- 6. Run Flask App ---
 if __name__ == "__main__":

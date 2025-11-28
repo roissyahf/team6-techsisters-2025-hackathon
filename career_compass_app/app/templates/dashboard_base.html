@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compassly Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  {% block css %}{% endblock %}
+  
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Top Nav -->
+    <header class="top-nav">
+      <div class="brand">
+        <div class="brand-icon">
+          <span> <span><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Compassly Logo"></span></span>
+        </div>
+        <div class="brand-title">Compassly</div>
+      </div>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="{{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+
+    <!-- Footer actions -->
+    <section class="footer-card">
+      <div class="footer-section">
+        <p class="footer-question">Need a different path?</p>
+        <button class="btn-outline" id="retake_quiz">Retake Assessment</button>
+      </div>
+      <div class="footer-section">
+        <p class="footer-question">Want to start fresh?</p>
+        <button class="btn-danger">Reset Progress</button>
+      </div>
+    </section>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

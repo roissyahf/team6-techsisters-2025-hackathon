@@ -1,0 +1,184 @@
+{% extends "dashboard_base.html" %}
+{% block title %}Compassly{% endblock %}
+{% block css %}
+<style>
+  .progress-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #a855f7, #ec4899);
+    }
+</style>
+{% endblock %}
+{% block content %}
+<!-- Hero -->
+    <section class="hero-card">
+      <div class="hero-illustration">
+        🎓 Journey
+      </div>
+      {% if current_user.is_authenticated %}
+      <h1 class="hero-title">Hi {{ current_user.lastname }}, ready to continue</h1>
+      <h2 class="hero-subtitle">your journey? ✨</h2>
+      {% endif %}
+      <p class="logout_link"><a href="logout">LOG OUT</a></p>
+      <div class="journey-card">
+        
+        <div class="journey-title">Your Journey to {{ current_user.job_role.title }}</div>
+        <div class="journey-start">Started: {{ now.strftime("%A, %B %d, %Y") }}</div>
+        
+      </div>
+    </section>
+
+    <!-- Main Grid -->
+    <section class="main-grid">
+      <!-- Progress -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Your Progress</div>
+        </div>
+
+        <p class="stat-label">0% Complete</p>
+        <div class="progress-track">
+          <div class="progress-bar"></div>
+        </div>
+
+        <p class="muted">
+          <strong>Current Phase:</strong> Foundation Building<br />
+          Week 3 of 24
+        </p>
+
+        <ul class="checklist" style="margin-top:10px;">
+          <li>2 courses completed</li>
+          <li>1 project in progress</li>
+          <li>0 certifications earned</li>
+        </ul>
+      </div>
+
+      <!-- Focus -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">This Week's Focus</div>
+        </div>
+
+        <p class="stat-label">
+          <span class="pill">Week 3: Foundation Building</span>
+        </p>
+
+        <ul class="checklist">
+          <li><span class="check-circle">✓</span>Complete FreeCodeCamp Responsive Web Design</li>
+          <li><span class="check-circle"></span>Join Women Who Code community</li>
+          <li><span class="check-circle"></span>Set up LinkedIn profile</li>
+          <li><span class="check-circle"></span>Practice 1 hour daily</li>
+        </ul>
+
+        <button class="btn-primary">Mark as Complete</button>
+      </div>
+
+      <!-- Learning Resources -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Your Recommended Courses</div>
+        </div>
+
+        <p class="muted">Currently Learning:</p>
+
+        <div class="resource-box">
+          <div class="resource-title">{{courses[0].title}}</div>
+          <div class="resource-progress-label">Progress: 60% • 12 hours logged</div>
+          <div class="resource-progress-track">
+            <div class="resource-progress-bar"></div>
+          </div>
+          <button class="btn-primary" style="margin-top:10px;">Continue</button>
+        </div>
+
+        <div class="up-next">
+          <div class="muted">Up Next:</div>
+          <ul>
+            {% for course in courses %}
+            <li>{{ course.title }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Stay Connected -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Stay Connected</div>
+        </div>
+        <p class="muted">“Progress over perfection”</p>
+
+        <div class="streak-pill">
+          <div class="streak-dot"></div>
+          <span>3-day learning streak!</span>
+        </div>
+
+        <p class="muted">Connect with others:</p>
+        <div class="tiny-buttons">
+          <button class="tiny-button">Women Who Code</button>
+          <button class="tiny-button secondary">TechLadies</button>
+          <button class="tiny-button secondary">+ Join More</button>
+        </div>
+
+        <button class="btn-primary">Share your progress on LinkedIn</button>
+      </div>
+    </section>
+
+    <!-- About accordion -->
+    <div class="accordion">
+      <span>About {{ current_user.job_role.title }}</span>
+      <div class="accordion-toggle">⌄</div>
+    </div>
+
+    <!-- Learning Activity -->
+    <section class="activity-card">
+      <div class="activity-header">Learning Activity (This Week)</div>
+
+      <div class="chart-wrapper">
+        <div class="chart">
+          <!-- Example “hours” are mirrored in inline heights -->
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 90px;"></div>
+            <div class="chart-hours">4h</div>
+            <div class="chart-day">Mon</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 70px;"></div>
+            <div class="chart-hours">3h</div>
+            <div class="chart-day">Tue</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 85px;"></div>
+            <div class="chart-hours">4h</div>
+            <div class="chart-day">Wed</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 110px;"></div>
+            <div class="chart-hours">5h</div>
+            <div class="chart-day">Thu</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 65px;"></div>
+            <div class="chart-hours">3h</div>
+            <div class="chart-day">Fri</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 60px;"></div>
+            <div class="chart-hours">2.5h</div>
+            <div class="chart-day">Sat</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 80px;"></div>
+            <div class="chart-hours">4h</div>
+            <div class="chart-day">Sun</div>
+          </div>
+        </div>
+
+        <div class="chart-summary">
+          <div>This Week: <span>8.5 hrs</span></div>
+          <div>Total: <span>42 hrs</span></div>
+          <div>Avg/Week: <span>10 hrs</span></div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

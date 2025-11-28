@@ -30,6 +30,12 @@ $(document).ready(function() {
                 loader('show');
                 validateBaseQuestionsForm();
         });
+        $("#get_started_btn").click(function(){
+            window.location.href="/dashboard";
+        });
+        $("#retake_quiz").click(function(){
+            window.location.href="/retake-quiz";
+        });
       /* Technical Quiz Response */
         /*$('#tech_quiz_btn').click(function(e){
             e.preventDefault();
@@ -73,7 +79,7 @@ function validateBaseQuestionsForm(){
            
             $("#submit_quiz_btn").attr("id","advance_quiz_btn");
             checkTechnicalLevel();
-            
+
     }
 }
 
@@ -434,7 +440,9 @@ function AcceptRole(){
      $(".base_questions").hide();
      $(".technical_questions").hide();
      $(".technical_roles").hide();
-
+     $(".courses").html("");
+     $("#page_heading").hide();
+      $("#page_desc").hide();
     var data = {
             user_id:user_id,
             selected_role: selectedRole
@@ -444,13 +452,10 @@ function AcceptRole(){
         url: "/accept_tech_role",
         method: "POST",
         contentType: "application/json",
-        dataType: "json",   
+       dataType: 'html',
         data: outputJson,
         success: function(res) {
-            console.log("Job Accepted");
-        },
-        error: function() {
-            $(".technical_questions").html("Error Occur: Please reload the page.");
+            $(".courses").html(res);
         }
 });
 

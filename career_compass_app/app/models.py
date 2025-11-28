@@ -166,6 +166,7 @@ class Course(TimestampMixin, db.Model):
     __tablename__ = "courses"
     id = db.Column(db.BigInteger, primary_key=True)
     title = db.Column(db.Text, nullable=False)
+    course_title = db.Column(db.Text)  # Alternative/additional title field
     description = db.Column(db.Text)
     location = db.Column(db.Text)
     job_roles_id = db.Column(db.BigInteger, db.ForeignKey("job_roles.id", ondelete="CASCADE"), nullable=False)
@@ -173,8 +174,20 @@ class Course(TimestampMixin, db.Model):
     start_date = db.Column(db.Date)
     end_date = db.Column(db.Date)
     
+    # New fields
+    platform = db.Column(db.Text)
+    skills = db.Column(postgresql.JSONB, nullable=False, server_default=db.text("'[]'::jsonb"))
+    rating = db.Column(db.Numeric(3, 2))  # e.g., 4.9
+    reviewcount = db.Column(db.Integer, default=0)
+    level = db.Column(db.Text)  # e.g., "beginner"
+    duration = db.Column(db.Text)  # e.g., "1 - 3 Months"
+    certificatetype = db.Column(db.Text)  # e.g., "Course"
+    crediteligibility = db.Column(db.Boolean, nullable=False, server_default=db.text("false"))
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id", ondelete="SET NULL"), nullable=True)
+    
     # Relationships
     job_role = db.relationship("JobRole", back_populates="courses")
+    user = db.relationship("User", foreign_keys=[user_id])
 
 class LiveJob(TimestampMixin, db.Model):
     __tablename__ = "live_jobs"
